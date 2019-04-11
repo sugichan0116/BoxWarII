@@ -23,7 +23,8 @@ public class EnduranceBehaviour : MonoBehaviour
         Rigidbody2D opponent = collision.rigidbody;
         Vector2 velocity = ((opponent == null) ? Vector2.zero : opponent.velocity) - rigidbody2.velocity;
         float impact = Mathf.Pow(velocity.magnitude, 2) * rigidbody2.mass;
-        Debug.Log(impact);
+        
+        //Debug.Log(impact);
         health -= impact;
 
         if(health <= 0f) Destroy(gameObject);
