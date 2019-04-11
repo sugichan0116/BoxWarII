@@ -23,7 +23,7 @@ public class Player : MonoBehaviour
         {
             phase = 0f;
             Vector2 playerPosition = RectTransformUtility.WorldToScreenPoint(Camera.main, transform.position);
-            GunBehaviour.FireBullet(
+            Gun.FireBullet(
                 transform,
                 prehabBullet,
                 firingSpeed,

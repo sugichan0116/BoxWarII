@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class BulletBehaviour : MonoBehaviour
 {
     protected Rigidbody2D rigidbody2;
     private Vector2 initialVelocity = Vector2.zero;
+    [SerializeField]
+    private ParticleSystem prefabExplosion;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +27,10 @@ public class BulletBehaviour : MonoBehaviour
 
     protected void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.collider.gameObject.tag != gameObject.tag) {
+            Gun.Explosion(prefabExplosion, transform);
+        }
+
         if(collision.rigidbody == null) Destroy(gameObject);
     }
 

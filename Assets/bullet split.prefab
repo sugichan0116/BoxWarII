@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 4399870044953498019}
   - component: {fileID: 4399870044953498016}
   - component: {fileID: 4399870044953498017}
-  - component: {fileID: 4506552724645499711}
   - component: {fileID: 5817089609379968199}
+  - component: {fileID: 6045108616039855481}
   m_Layer: 0
   m_Name: bullet split
   m_TagString: Bullet
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   robustness: 10
---- !u!114 &4506552724645499711
+--- !u!114 &5817089609379968199
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,7 +159,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4ba0fe6b18c694095cca57d4a8716a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5817089609379968199
+  prefabExplosion: {fileID: 4119155743951176749, guid: 5133a0f69ffc407419f5512b6cafa480,
+    type: 3}
+--- !u!114 &6045108616039855481
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,12 +170,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 4399870044953498030}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9abe27b2cd6921846b8ebfe22f45a4a8, type: 3}
+  m_Script: {fileID: 11500000, guid: 26b7232d10c248240b3fa1e3d3295e8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prefabBullet: {fileID: 9061863679364332963, guid: dfae2adf38313c54aa970c454e705f29,
     type: 3}
-  innerBullet: 21
-  timeSplit: 0.19
-  errorAngle: 54.94
-  accelerationRate: 3.1
+  innerBullet: 4
+  timeSplit: 0.3
+  errorAngle: 30
+  accelerationRate: 2
