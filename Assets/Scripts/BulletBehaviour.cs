@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class BulletBehaviour : MonoBehaviour
 {
-    private Rigidbody2D rigidbody;
+    protected Rigidbody2D rigidbody2;
+    private Vector2 initialVelocity = Vector2.zero;
 
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        rigidbody2 = GetComponent<Rigidbody2D>();
+        rigidbody2.AddForce(initialVelocity);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("" + Vector2.Angle(Vector2.zero, rigidbody.velocity) + "/" + rigidbody.velocity);
-        transform.rotation = Quaternion.Euler(0f, 0f, angleBetween(Vector2.zero, rigidbody.velocity) );
+        transform.rotation = Quaternion.Euler(0f, 0f, angleBetween(Vector2.zero, GetComponent<Rigidbody2D>().velocity) );
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void SetInitialVelocity(Vector2 force) => initialVelocity = force;
+
+    protected void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.rigidbody == null) Destroy(gameObject);
     }

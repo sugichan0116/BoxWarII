@@ -1,0 +1,47 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Shotgun : BulletBehaviour
+{
+    [SerializeField]
+    private BulletBehaviour prefabBullet;
+    [SerializeField]
+    private int innerBullet = 2;
+    [SerializeField]
+    private float timeSplit = 1f;
+    [SerializeField]
+    private float errorAngle = 30f;
+    [SerializeField]
+    private float accelerationRate = 1f;
+
+    private void Start()
+    {
+        Invoke("Split", timeSplit);
+    }
+
+    private void Split()
+    {
+
+        rigidbody2 = GetComponent<Rigidbody2D>();
+        Debug.Log("" + rigidbody2 + "." + prefabBullet + "." + transform);
+        for (int i = 0; i < innerBullet; i++)
+        {
+            Vector2 direction = Direction(i, innerBullet);
+            GunBehaviour.FireBullet(
+                transform,
+                prefabBullet,
+                rigidbody2.velocity.magnitude * accelerationRate,
+                direction,
+                Vector2.zero //direction.normalized
+                );
+        }
+
+        Destroy(gameObject);
+    }
+
+    protected Vector2 Direction(int index, int entire)
+    {
+        return Quaternion.Euler(0, 0, Random.Range(-errorAngle, errorAngle)) * rigidbody2.velocity.normalized;
+    }
+}
