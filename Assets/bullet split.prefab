@@ -179,7 +179,7 @@ MonoBehaviour:
     type: 3}
   prefabExplosion: {fileID: 4119155743951176749, guid: 5133a0f69ffc407419f5512b6cafa480,
     type: 3}
-  innerBullet: 13
+  innerBullet: 12
   timeSplit: 0.3
   errorAngle: 30
-  accelerationRate: 4.3
+  accelerationRate: 4
