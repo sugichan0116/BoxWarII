@@ -5,8 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class QuadrantBody : EnduranceBody
 {
-    [SerializeField]
-    private EnduranceBody prefabBody;
+    public EnduranceBody prefabBody;
     private bool isSplit = false;
 
     protected override void Destruction()

@@ -2627,7 +2627,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901932562}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
@@ -2718,6 +2718,7 @@ MonoBehaviour:
     type: 3}
   firingSpeed: 100.52
   cooltime: 0.3
+  movingSpeed: 100
 --- !u!61 &1934724123
 BoxCollider2D:
   m_ObjectHideFlags: 0

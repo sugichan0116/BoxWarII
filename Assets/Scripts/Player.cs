@@ -2,20 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
     public BulletBehaviour prehabBullet;
     [SerializeField]
-    private float firingSpeed = 1f;
+    private float firingSpeed = 100f;
     [SerializeField]
     private float cooltime = 0.3f;
+    [SerializeField]
+    private float movingSpeed = 10f;
+
     private float phase = 0f;
     private Vector2 firingOffset = new Vector2(0, 0.5f);
+    private Rigidbody2D rigidbody2;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rigidbody2 = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -38,4 +43,11 @@ public class Player : MonoBehaviour
         phase += Time.deltaTime;
     }
 
+    void FixedUpdate()
+    {
+        Vector2 input = new Vector2(Input.GetAxis("Horizontal"), 0f); //Input.GetAxis("Vertical"));
+        Debug.Log(input);
+
+        rigidbody2.AddForce(input * movingSpeed);
+    }
 }

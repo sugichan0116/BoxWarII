@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class ShotgunBehaviour : MonoBehaviour
 {
-    [SerializeField]
-    private BulletBehaviour prefabBullet;
-    [SerializeField]
-    private ParticleSystem prefabExplosion;
+    public BulletBehaviour prefabBullet;
+    public ParticleSystem prefabExplosion;
 
     [SerializeField]
     private int innerBullet = 2;

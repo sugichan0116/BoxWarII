@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class ExplosionBehaviour : MonoBehaviour
 {
-    protected Rigidbody2D rigidbody2;
+    private Rigidbody2D rigidbody2;
     private bool isExplosion;
     [SerializeField]
     private float strongth = 1000f;
