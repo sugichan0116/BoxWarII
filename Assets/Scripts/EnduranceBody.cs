@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class EnduranceBehaviour : MonoBehaviour
+public class EnduranceBody : MonoBehaviour
 {
     [SerializeField]
-    private float robustness = 10;
+    protected float robustness = 10;
     private float health;
     private Rigidbody2D rigidbody2;
 
-    private void Start()
+    protected void Start()
     {
         rigidbody2 = GetComponent<Rigidbody2D>();
-        health = rigidbody2.mass * robustness;
+        health = rigidbody2.mass * Mathf.Pow(robustness, 2);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -27,6 +27,12 @@ public class EnduranceBehaviour : MonoBehaviour
         //Debug.Log(impact);
         health -= impact;
 
-        if(health <= 0f) Destroy(gameObject);
+        if (health <= 0f) Destruction();
     }
+
+    protected virtual void Destruction()
+    {
+        Destroy(gameObject);
+    }
+
 }

@@ -7,7 +7,9 @@ public class Player : MonoBehaviour
     public BulletBehaviour prehabBullet;
     [SerializeField]
     private float firingSpeed = 1f;
-    private float cooltime = 0.3f, phase = 0f;
+    [SerializeField]
+    private float cooltime = 0.3f;
+    private float phase = 0f;
     private Vector2 firingOffset = new Vector2(0, 0.5f);
 
     // Start is called before the first frame update
@@ -22,7 +24,9 @@ public class Player : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && phase >= cooltime)
         {
             phase = 0f;
-            Vector2 playerPosition = RectTransformUtility.WorldToScreenPoint(Camera.main, transform.position);
+            Vector2 playerPosition = RectTransformUtility.WorldToScreenPoint(
+                Camera.main, transform.position);
+
             Gun.FireBullet(
                 transform,
                 prehabBullet,

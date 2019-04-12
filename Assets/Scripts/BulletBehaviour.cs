@@ -20,7 +20,9 @@ public class BulletBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.rotation = Quaternion.Euler(0f, 0f, angleBetween(Vector2.zero, GetComponent<Rigidbody2D>().velocity) );
+        transform.rotation = Quaternion.Euler(
+            0f, 0f, angleBetween(Vector2.zero, GetComponent<Rigidbody2D>().velocity) 
+            );
     }
 
     public void SetInitialVelocity(Vector2 force) => initialVelocity = force;
@@ -28,7 +30,8 @@ public class BulletBehaviour : MonoBehaviour
     protected void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.gameObject.tag != gameObject.tag) {
-            Gun.Explosion(prefabExplosion, transform);
+            Gun.DeployEffect(prefabExplosion, transform);
+            Destroy(gameObject);
         }
 
         if(collision.rigidbody == null) Destroy(gameObject);

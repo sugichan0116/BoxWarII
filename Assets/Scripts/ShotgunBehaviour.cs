@@ -7,6 +7,9 @@ public class ShotgunBehaviour : MonoBehaviour
     [SerializeField]
     private BulletBehaviour prefabBullet;
     [SerializeField]
+    private ParticleSystem prefabExplosion;
+
+    [SerializeField]
     private int innerBullet = 2;
     [SerializeField]
     private float timeSplit = 1f;
@@ -27,6 +30,7 @@ public class ShotgunBehaviour : MonoBehaviour
         for (int i = 0; i < innerBullet; i++)
         {
             Vector2 direction = Direction(i, innerBullet);
+
             Gun.FireBullet(
                 transform,
                 prefabBullet,
@@ -34,6 +38,8 @@ public class ShotgunBehaviour : MonoBehaviour
                 direction,
                 Vector2.zero //direction.normalized
                 );
+
+            Gun.DeployEffect(prefabExplosion, transform);
         }
 
         Destroy(gameObject);
