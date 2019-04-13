@@ -872,6 +872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1901932562}
+  stalkingRate: 0.04
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
