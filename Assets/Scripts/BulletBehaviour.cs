@@ -29,7 +29,7 @@ public class BulletBehaviour : MonoBehaviour
     protected void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.gameObject.tag != gameObject.tag) {
-            Gun.DeployEffect(prefabExplosion, transform);
+            Builder.Effecter(prefabExplosion, transform);
             Destroy(gameObject);
         }
 

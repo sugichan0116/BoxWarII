@@ -161,8 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4ba0fe6b18c694095cca57d4a8716a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabExplosion: {fileID: 4119155743951176749, guid: 5133a0f69ffc407419f5512b6cafa480,
-    type: 3}
+  prefabExplosion: {fileID: 19800014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
 --- !u!114 &7554543127520627542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,8 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabBullet: {fileID: 6039534866774545707, guid: 943892ee55fd0c34087562bd56fa9454,
     type: 3}
-  prefabExplosion: {fileID: 4119155743951176749, guid: 5133a0f69ffc407419f5512b6cafa480,
-    type: 3}
+  prefabExplosion: {fileID: 19800014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}
   innerBullet: 5
   timeSplit: 0.3
   errorAngle: 30

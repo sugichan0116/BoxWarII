@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
             Vector2 playerPosition = RectTransformUtility.WorldToScreenPoint(
                 Camera.main, transform.position);
 
-            Gun.FireBullet(
+            Builder.Bullet(
                 transform,
                 prehabBullet,
                 firingSpeed,

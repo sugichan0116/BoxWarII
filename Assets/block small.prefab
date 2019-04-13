@@ -144,3 +144,4 @@ MonoBehaviour:
   robustness: 5
   prefabBody: {fileID: 311814427403872466, guid: 87a0041469480b548a1f6f07413d4763,
     type: 3}
+  prefabSmoke: {fileID: 19800014, guid: 5332791ebce075d4a9e56f4581e7fb47, type: 3}

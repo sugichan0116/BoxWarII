@@ -29,7 +29,7 @@ public class ShotgunBehaviour : MonoBehaviour
         {
             Vector2 direction = Direction(i, innerBullet);
 
-            Gun.FireBullet(
+            Builder.Bullet(
                 transform,
                 prefabBullet,
                 rigidbody2.velocity.magnitude * accelerationRate,
@@ -37,7 +37,7 @@ public class ShotgunBehaviour : MonoBehaviour
                 Vector2.zero //direction.normalized
                 );
 
-            Gun.DeployEffect(prefabExplosion, transform);
+            Builder.Effecter(prefabExplosion, transform);
         }
 
         Destroy(gameObject);
