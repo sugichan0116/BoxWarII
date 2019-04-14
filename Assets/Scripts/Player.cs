@@ -46,7 +46,6 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 input = new Vector2(Input.GetAxis("Horizontal"), 0f); //Input.GetAxis("Vertical"));
-        Debug.Log(input);
 
         rigidbody2.AddForce(input * movingSpeed);
     }
