@@ -7,13 +7,13 @@ public class EnduranceBody : MonoBehaviour
 {
     [SerializeField]
     protected float robustness = 10;
-    private float health;
+    private float health, maxHealth;
     private Rigidbody2D rigidbody2;
 
     protected void Start()
     {
         rigidbody2 = GetComponent<Rigidbody2D>();
-        health = rigidbody2.mass * Mathf.Pow(robustness, 2);
+        maxHealth = health = rigidbody2.mass * Mathf.Pow(robustness, 2);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -34,5 +34,9 @@ public class EnduranceBody : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public float Health() => health;
+    public float MaxHealth() => maxHealth;
+
 
 }
