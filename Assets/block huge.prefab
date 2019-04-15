@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5719351875833795415}
   - component: {fileID: 5719351875833795400}
   - component: {fileID: 9033009223758891129}
+  - component: {fileID: 7124125278396956284}
   m_Layer: 0
   m_Name: block huge
   m_TagString: Untagged
@@ -141,7 +142,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89db1cef2dc1e246a2684d98cf286b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  robustness: 50
-  prefabBody: {fileID: 1186652039322698812, guid: d5e8364216055a44da7402f2b3bfd0f1,
+  prefabBody: {fileID: 4413584410268793723, guid: d5e8364216055a44da7402f2b3bfd0f1,
     type: 3}
   prefabSmoke: {fileID: 19800002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}
+--- !u!114 &7124125278396956284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719351875833795403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c244ab6bd2c6a7e45b3566505a7e985b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  robustness: 10

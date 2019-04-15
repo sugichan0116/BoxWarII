@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 653611531647993231}
   - component: {fileID: 653611531647993230}
   - component: {fileID: 653611531647993225}
+  - component: {fileID: 4413584410268793723}
   - component: {fileID: 1186652039322698812}
   m_Layer: 0
   m_Name: block big
@@ -129,6 +130,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &4413584410268793723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653611531647993226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c244ab6bd2c6a7e45b3566505a7e985b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  robustness: 10
 --- !u!114 &1186652039322698812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,7 +155,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89db1cef2dc1e246a2684d98cf286b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  robustness: 20
-  prefabBody: {fileID: 4109109394056767360, guid: 120bc2abeb7f6b74e939d94589e38f2e,
+  prefabBody: {fileID: 8616739491464002763, guid: 120bc2abeb7f6b74e939d94589e38f2e,
     type: 3}
   prefabSmoke: {fileID: 19800008, guid: 1dbc518224e49f34095aab42fe05751a, type: 3}

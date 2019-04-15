@@ -3,17 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class QuadrantBody : EnduranceBody
+public class QuadrantOnDestroy : BehaviourOnDestroy
 {
     public EnduranceBody prefabBody;
     public ParticleSystem prefabSmoke;
 
-    private bool isSplit = false;
+    //private bool isSplit = false;
 
-    protected override void Destruction()
+    protected override void DoOnDestroy()
     {
-        if (isSplit) return;
-        Debug.Log("** " + transform.localScale + "." + transform.position + "/" + SpriteSize());
+        //if (isSplit) return;
 
         Vector2 scale = SpriteSize() / (4 * Mathf.Sqrt(2));
         for (int i = 0; i < 4; i++)
@@ -26,9 +25,7 @@ public class QuadrantBody : EnduranceBody
 
         if(prefabSmoke != null) Builder.Effecter(prefabSmoke, transform);
 
-        isSplit = true;
-
-        Destroy(gameObject);
+        //isSplit = true;
     }
 
     private Vector2 SpriteSize()

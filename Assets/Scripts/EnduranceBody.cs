@@ -27,14 +27,9 @@ public class EnduranceBody : MonoBehaviour
         //Debug.Log(impact);
         health -= impact;
 
-        if (health <= 0f) Destruction();
+        if (health <= 0f) Destroy(gameObject);
     }
-
-    protected virtual void Destruction()
-    {
-        Destroy(gameObject);
-    }
-
+    
     public float Health() => health;
     public float MaxHealth() => maxHealth;
 
