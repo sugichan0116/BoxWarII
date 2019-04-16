@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class DropOnDestroy : BehaviourOnDestroy
+public class SplitOnDestroy : BehaviourOnDestroy
 {
-    public EnduranceBody prefabItem;
+    public EnduranceBody prefabBody;
     public ParticleSystem prefabSmoke;
 
     protected override void DoOnDestroy()
     {
         //drop item
         Builder.Block(
-            prefabItem,
+            prefabBody,
             transform.position,
             transform.rotation);
     }

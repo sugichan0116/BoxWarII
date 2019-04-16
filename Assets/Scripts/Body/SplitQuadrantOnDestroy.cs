@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class QuadrantOnDestroy : BehaviourOnDestroy
+public class SplitQuadrantOnDestroy : BehaviourOnDestroy
 {
     public EnduranceBody prefabBody;
     public ParticleSystem prefabSmoke;
