@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     private float movingSpeed = 10f;
 
     private float phase = 0f;
-    private Vector2 firingOffset = new Vector2(0, 0.5f);
+    private Vector2 firingOffset = new Vector2(0, 1f);
     private Rigidbody2D rigidbody2;
 
     // Start is called before the first frame update

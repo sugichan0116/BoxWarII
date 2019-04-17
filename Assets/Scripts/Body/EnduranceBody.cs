@@ -20,6 +20,12 @@ public class EnduranceBody : MonoBehaviour
     {
         if (collision.collider.gameObject.tag == gameObject.tag) return;
 
+        if(rigidbody2 == null)
+        {
+            Debug.LogWarning("Rigid Error null");
+            return;
+        }
+
         Rigidbody2D opponent = collision.rigidbody;
         Vector2 velocity = ((opponent == null) ? Vector2.zero : opponent.velocity) - rigidbody2.velocity;
         float impact = Mathf.Pow(velocity.magnitude, 2) * rigidbody2.mass;
@@ -29,6 +35,8 @@ public class EnduranceBody : MonoBehaviour
 
         if (health <= 0f) Destroy(gameObject);
     }
+
+
     
     public float Health() => health;
     public float MaxHealth() => maxHealth;
