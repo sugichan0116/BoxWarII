@@ -56,6 +56,7 @@ public class DragAndDropItem : MonoBehaviour, IBeginDragHandler, IDragHandler, I
 			Image iconImage = icon.AddComponent<Image>();
 			iconImage.raycastTarget = false;
 			iconImage.sprite = myImage.sprite;
+            iconImage.preserveAspect = true;
 			RectTransform iconRect = icon.GetComponent<RectTransform>();
 			// Set icon's dimensions
 			RectTransform myRect = GetComponent<RectTransform>();
