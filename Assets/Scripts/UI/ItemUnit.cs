@@ -10,9 +10,16 @@ public class ItemUnit : MonoBehaviour
     private float speed;
     [SerializeField]
     private float skill;
+    [SerializeField]
+    private List<string> attribute;
     
     public DragAndDropItem Item()
     {
         return GetComponent<DragAndDropItem>();
+    }
+
+    public bool HaveAttribute(string attr)
+    {
+        return attribute.Contains(attr);
     }
 }

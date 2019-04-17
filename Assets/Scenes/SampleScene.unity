@@ -3475,6 +3475,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1851065057}
     m_Modifications:
+    - target: {fileID: 1431256857371529103, guid: 752523fd9d8fe014e995a74d82437937,
+        type: 3}
+      propertyPath: Attribute.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431256857371529103, guid: 752523fd9d8fe014e995a74d82437937,
+        type: 3}
+      propertyPath: attribute.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9053932599528073861, guid: 752523fd9d8fe014e995a74d82437937,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3599,6 +3609,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431256857371529103, guid: 752523fd9d8fe014e995a74d82437937,
+        type: 3}
+      propertyPath: Attribute.Array.data[0]
+      value: Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 1431256857371529103, guid: 752523fd9d8fe014e995a74d82437937,
+        type: 3}
+      propertyPath: attribute.Array.data[0]
+      value: Bullet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 752523fd9d8fe014e995a74d82437937, type: 3}
@@ -4459,6 +4479,39 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!1 &1141000944 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 426529401379618837, guid: 8e481ce7780493841898c131b49b6e4d,
+    type: 3}
+  m_PrefabInstance: {fileID: 2098819512}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1141000948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141000944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 949b4032141f7114199227b8fcbbc706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  error: {r: 1, g: 0.60990745, b: 0, a: 0.73333335}
+  item: {fileID: 0}
+--- !u!114 &1141000949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1141000944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 016f8c66674910446824a4098acd4144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attr: Bullet
 --- !u!1 &1151616611
 GameObject:
   m_ObjectHideFlags: 0
