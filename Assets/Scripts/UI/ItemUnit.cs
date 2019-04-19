@@ -5,13 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(DragAndDropItem))]
 public class ItemUnit : MonoBehaviour
 {
-    //test parameter
-    [SerializeField]
-    private float speed;
-    [SerializeField]
-    private float skill;
-    [SerializeField]
-    private List<string> attribute;
+    public Status status;
     
     public DragAndDropItem Item()
     {
@@ -20,6 +14,6 @@ public class ItemUnit : MonoBehaviour
 
     public bool HaveAttribute(string attr)
     {
-        return attribute.Contains(attr);
+        return status.Attribute.Contains(attr);
     }
 }

@@ -3326,6 +3326,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 608738973053388472}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &936101421 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2234461432204020461, guid: 4a96a4a55a0ab6d4095080dd3a57f763,
+    type: 3}
+  m_PrefabInstance: {fileID: 2043667128}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 949b4032141f7114199227b8fcbbc706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &943962142
 GameObject:
   m_ObjectHideFlags: 0
@@ -8061,11 +8073,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1996806534}
-  - component: {fileID: 1996806538}
-  - component: {fileID: 1996806537}
   - component: {fileID: 1996806536}
   - component: {fileID: 1996806535}
   - component: {fileID: 1996806539}
+  - component: {fileID: 1996806540}
+  - component: {fileID: 1996806538}
+  - component: {fileID: 1996806537}
   m_Layer: 5
   m_Name: Equipment
   m_TagString: Untagged
@@ -8179,6 +8192,20 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
+--- !u!114 &1996806540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996806533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b5b41e11b6beff428928ae747a13ae6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cell: {fileID: 936101421}
+  player: {fileID: 1901932568}
 --- !u!1 &1997620615
 GameObject:
   m_ObjectHideFlags: 0

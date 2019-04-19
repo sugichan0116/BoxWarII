@@ -5,7 +5,7 @@ public class CellRequireAttribute : MonoBehaviour
 {
     private CellUnit cell;
     [SerializeField]
-    private string attr;
+    private string attr = "";
 
 
     // Start is called before the first frame update
