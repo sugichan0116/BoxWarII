@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(
   fileName = "Status",
@@ -12,11 +13,8 @@ public class Status : ScriptableObject
 {
     public string Name = "name";
     public List<string> Attribute = new List<string>(1);
+    public Sprite icon;
     public string text = "good small bullet.";
-    public float Mass = 1f;
-    public float FiringSpeed = 100f;
-    public float Cooltime = 0.3f;
-    public BulletBehaviour prefabBullet;
 }
 
 

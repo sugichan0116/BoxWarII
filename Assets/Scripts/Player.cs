@@ -5,16 +5,10 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player : MonoBehaviour
 {
-    public BulletBehaviour prehabBullet;
-    [SerializeField]
-    private float firingSpeed = 100f;
-    [SerializeField]
-    private float cooltime = 0.3f;
     [SerializeField]
     private float movingSpeed = 10f;
+    public GunBehaviour gun;
 
-    private float phase = 0f;
-    private Vector2 firingOffset = new Vector2(0, 1f);
     private Rigidbody2D rigidbody2;
 
     // Start is called before the first frame update
@@ -26,21 +20,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0) && phase >= cooltime)
-        {
-            phase = 0f;
-            Vector2 playerPosition = RectTransformUtility.WorldToScreenPoint(
-                Camera.main, transform.position);
 
-            Builder.Bullet(
-                transform,
-                prehabBullet,
-                firingSpeed,
-                (Vector2)Input.mousePosition - playerPosition,
-                firingOffset
-                );
-        }
-        phase += Time.deltaTime;
     }
 
     void FixedUpdate()

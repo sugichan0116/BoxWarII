@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61977502e8f11154986318ea35aaad8b, type: 3}
+  m_Name: StatusBullet explosion
+  m_EditorClassIdentifier: 
+  Name: Explosion Bullet
+  Attribute:
+  - Bullet
+  - Sub
+  icon: {fileID: 21300004, guid: 11ad40bdfaad6584ea79b5997cf05f7d, type: 3}
+  text: Explosion Bomb ! Strong is Power !
+  Mass: 1
+  FiringSpeed: 100
+  Cooltime: 0.3
+  prefabBullet: {fileID: 6039534866774545707, guid: 943892ee55fd0c34087562bd56fa9454,
+    type: 3}

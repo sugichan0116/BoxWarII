@@ -9,13 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c71733792319c51488552554ad92ae78, type: 3}
-  m_Name: bullet
+  m_Script: {fileID: 11500000, guid: 61977502e8f11154986318ea35aaad8b, type: 3}
+  m_Name: StatusBullet
   m_EditorClassIdentifier: 
-  Name: bullet
+  Name: Simple Bullet
   Attribute:
   - Bullet
   - Sub
+  icon: {fileID: 21300002, guid: 11ad40bdfaad6584ea79b5997cf05f7d, type: 3}
   text: good small bullet.
   Mass: 1
   FiringSpeed: 100

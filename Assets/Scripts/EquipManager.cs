@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EquipManager : MonoBehaviour
 {
-    public CellUnit cell;
+    public CellUnit cellBullet;
     public Player player;
 
     // Start is called before the first frame update
@@ -16,8 +16,11 @@ public class EquipManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (cell.item == null) return;
-        player.prehabBullet = cell.item.status.prefabBullet;
+        if (cellBullet.item == null) return;
+        if (cellBullet.item.status is StatusBullet bullet)
+        {
+            player.gun.prehabBullet = bullet.prefabBullet;
+        }
     }
 
     
