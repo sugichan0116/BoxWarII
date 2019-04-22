@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 449463647838465934}
   - component: {fileID: 7748969400064821992}
   - component: {fileID: 7554543127520627542}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bullet split explosion
   m_TagString: Bullet
   m_Icon: {fileID: 0}

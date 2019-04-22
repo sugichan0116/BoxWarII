@@ -18,7 +18,7 @@ public class EnduranceBody : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.gameObject.tag == gameObject.tag) return;
+        if (Builder.IsSameside(collision.collider.gameObject, gameObject)) return;
 
         if(rigidbody2 == null)
         {

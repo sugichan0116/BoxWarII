@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6596854004649309339}
   - component: {fileID: 6596854004649309338}
   - component: {fileID: 6596854004649309337}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: block item
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -155,5 +155,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf58af30597e984ca99623058d17445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 1431256857371529103, guid: 9a5543e2ee38e3343929669822c52658, type: 3}
   itemTable: {fileID: 11400000, guid: 62ac2474144990d4da8b6a31b2eeee7b, type: 2}

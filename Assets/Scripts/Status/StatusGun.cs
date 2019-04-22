@@ -13,4 +13,5 @@ public class StatusGun : Status
 {
     public float FiringSpeedRate = 1f;
     public float CooltimeRate = 1f;
+    public Vector2 offset = new Vector2();
 }

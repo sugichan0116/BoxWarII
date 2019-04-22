@@ -14,16 +14,23 @@ public class Builder : MonoBehaviour
     private static GameObject poolBlock;
     private static string nameBlock = "Block Pool";
     
-    // Start is called before the first frame update
-    void Start()
+    public static Quaternion Rotate(Vector2 a)
     {
-        
+        return Quaternion.Euler(0f, 0f, AngleBetween(Vector2.zero, a));
     }
 
-    // Update is called once per frame
-    void Update()
+    public static float AngleBetween(Vector2 from, Vector2 to)
     {
-        
+        float dx = to.x - from.x;
+        float dy = to.y - from.y;
+        float rad = Mathf.Atan2(dy, dx);
+        return rad * Mathf.Rad2Deg;
+    }
+
+    public static bool IsSameside(GameObject a, GameObject b)
+    {//collision.collider.gameObject.layer != gameObject.layer
+        return false;
+        //return a.layer == b.layer;//collision.collider.gameObject.tag == gameObject.tag;
     }
 
     public static T FindGameObject<T>(string Tag)
@@ -50,7 +57,8 @@ public class Builder : MonoBehaviour
     }
 
     public static void Bullet(Transform transform, 
-        BulletBehaviour prefabBullet, float speed, Vector2 direction, Vector2 firingOffset)
+        BulletBehaviour prefabBullet, float speed, Vector2 direction, 
+        Vector2 firingOffset, string newLayer)
     {
         if (poolBullet == null) poolBullet = GameObject.Find(nameBullet);
 
@@ -63,5 +71,6 @@ public class Builder : MonoBehaviour
 
         bullet.transform.parent = poolBullet.transform;
         bullet.SetInitialVelocity(direction);
+        bullet.gameObject.layer = LayerMask.NameToLayer(newLayer);
     }
 }

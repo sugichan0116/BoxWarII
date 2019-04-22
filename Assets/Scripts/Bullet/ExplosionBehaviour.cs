@@ -21,19 +21,16 @@ public class ExplosionBehaviour : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if(isExplosion) return;
-        
-        if(collision.collider.gameObject.tag != gameObject.tag)
-        {
-            isExplosion = true;
-            foreach(Collider2D collider in 
-                Physics2D.OverlapCircleAll(transform.position, radius))
-            {
-                Rigidbody2D other = collider.gameObject.GetComponent<Rigidbody2D>();
-                
-                if(other == null || transform.position == null) continue;
-                other.AddExplosionForce(strongth, transform.position, radius);
-            }
+        if (Builder.IsSameside(collision.collider.gameObject, gameObject)) return;
 
+        isExplosion = true;
+        foreach(Collider2D collider in 
+            Physics2D.OverlapCircleAll(transform.position, radius))
+        {
+            Rigidbody2D other = collider.gameObject.GetComponent<Rigidbody2D>();
+                
+            if(other == null || transform.position == null) continue;
+            other.AddExplosionForce(strongth, transform.position, radius);
         }
     }
 

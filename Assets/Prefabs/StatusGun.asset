@@ -19,5 +19,4 @@ MonoBehaviour:
   text: Big Gun for girl.
   FiringSpeedRate: 1
   CooltimeRate: 1
-  prefabGun: {fileID: 7797329473711486343, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
-    type: 3}
+  offset: {x: 0.16, y: 0}

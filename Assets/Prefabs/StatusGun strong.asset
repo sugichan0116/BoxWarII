@@ -19,3 +19,4 @@ MonoBehaviour:
   text: Big and Strong. Powerful.
   FiringSpeedRate: 1.5
   CooltimeRate: 1.2
+  offset: {x: 0.32, y: 0}

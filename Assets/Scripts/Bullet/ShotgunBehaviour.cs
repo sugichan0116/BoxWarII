@@ -34,7 +34,8 @@ public class ShotgunBehaviour : MonoBehaviour
                 prefabBullet,
                 rigidbody2.velocity.magnitude * accelerationRate,
                 direction,
-                Vector2.zero //direction.normalized
+                Vector2.zero, //direction.normalized
+                LayerMask.LayerToName(gameObject.layer)
                 );
 
             Builder.Effecter(prefabExplosion, transform);

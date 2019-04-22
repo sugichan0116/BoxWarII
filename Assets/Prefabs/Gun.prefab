@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7797329473711486337}
   - component: {fileID: 7797329473711486343}
   - component: {fileID: 7797329473711486342}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,9 +93,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9d5b22475e4c564d9630001174e5956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prehabBullet: {fileID: 0}
-  firingSpeed: 100
-  cooltime: 0.3
+  gun: {fileID: 0}
+  bullet: {fileID: 0}
 --- !u!114 &7797329473711486342
 MonoBehaviour:
   m_ObjectHideFlags: 0
