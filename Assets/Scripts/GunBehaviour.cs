@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
+[RequireComponent(typeof(SpriteRenderer))]
 public class GunBehaviour : MonoBehaviour
 {
-    public BulletBehaviour prehabBullet;
-    [SerializeField]
-    private float firingSpeed = 100f;
-    [SerializeField]
-    private float cooltime = 0.3f;
+    private BulletBehaviour prefabBullet;
+    public StatusGun gun;
+    public StatusBullet bullet;
 
+    private float firingSpeed = 100f;
+    private float cooltime = 0.3f;
     private float phase = 0f;
     private Vector2 firingOffset = new Vector2(1f, 1f);
 
@@ -22,7 +24,13 @@ public class GunBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (prehabBullet != null && Input.GetMouseButtonDown(0) && phase >= cooltime)
+        if (gun == null || bullet == null) return;
+
+        prefabBullet = bullet.prefabBullet;
+        cooltime = gun.CooltimeRate * bullet.Cooltime;
+        firingSpeed = gun.FiringSpeedRate * bullet.FiringSpeed;
+
+        if (Input.GetMouseButtonDown(0) && phase >= cooltime)
         {
             phase = 0f;
             Vector2 playerPosition = RectTransformUtility.WorldToScreenPoint(
@@ -30,7 +38,7 @@ public class GunBehaviour : MonoBehaviour
 
             Builder.Bullet(
                 transform,
-                prehabBullet,
+                prefabBullet,
                 firingSpeed,
                 (Vector2)Input.mousePosition - playerPosition,
                 firingOffset
@@ -38,5 +46,10 @@ public class GunBehaviour : MonoBehaviour
         }
         phase += Time.deltaTime;
 
+    }
+
+    private void FixedUpdate()
+    {
+        GetComponent<SpriteRenderer>().sprite = (gun == null) ? null : gun.icon;
     }
 }

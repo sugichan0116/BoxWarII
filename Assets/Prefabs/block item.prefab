@@ -156,3 +156,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 1431256857371529103, guid: 9a5543e2ee38e3343929669822c52658, type: 3}
+  itemTable: {fileID: 11400000, guid: 62ac2474144990d4da8b6a31b2eeee7b, type: 2}

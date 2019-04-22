@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Builder : MonoBehaviour
@@ -23,6 +24,13 @@ public class Builder : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public static T FindGameObject<T>(string Tag)
+    {
+        return GameObject.FindGameObjectsWithTag(Tag)
+             .FirstOrDefault(value => value.GetComponent<T>() != null)
+            .GetComponent<T>();
     }
 
     public static void Block(EnduranceBody prefabBody, Vector2 position, Quaternion rotation)

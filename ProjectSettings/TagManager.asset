@@ -8,6 +8,7 @@ TagManager:
   - FxTemporaire
   - Pool
   - Inventory
+  - ItemDetail
   layers:
   - Default
   - TransparentFX

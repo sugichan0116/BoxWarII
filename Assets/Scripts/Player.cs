@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField]
     private float movingSpeed = 10f;
-    public GunBehaviour gun;
+    public GunBehaviour gunContainer;
 
     private Rigidbody2D rigidbody2;
 

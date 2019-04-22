@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 9053932599521253993}
   - component: {fileID: 9053932599521250795}
   - component: {fileID: 1431256857371529103}
-  - component: {fileID: 8062487936127947862}
+  - component: {fileID: 7222256822787747750}
   m_Layer: 5
-  m_Name: item test
+  m_Name: item gun test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300002, guid: 11ad40bdfaad6584ea79b5997cf05f7d, type: 3}
+  m_Sprite: {fileID: 21300006, guid: c79720bb5b8b5734a9a6067aecff7cad, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -101,8 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a9e9db557d31054a9a5168d2af4d1dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  status: {fileID: 11400000, guid: 1a552d5f20c161e438d0f96fae271e0d, type: 2}
---- !u!114 &8062487936127947862
+  status: {fileID: 11400000, guid: 0a3a0f70e0ad83941bb122db9c626c07, type: 2}
+--- !u!114 &7222256822787747750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

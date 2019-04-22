@@ -5,18 +5,16 @@ using UnityEngine;
 
 public class DropItemOnDestroy : BehaviourOnDestroy
 {
-    public ItemUnit item;
+    public ItemTable itemTable;
     private InventoryUnit inventory;
     
     void Start()
     {
-        inventory = GameObject.FindGameObjectsWithTag("Inventory")
-            .FirstOrDefault(value => value.GetComponent<InventoryUnit>() != null)
-            .GetComponent<InventoryUnit>();
+        inventory = Builder.FindGameObject<InventoryUnit>("Inventory");
     }
     
     protected override void DoOnDestroy()
     {
-        inventory.AddItem(item);
+        inventory.AddItem(itemTable.GetStatus());
     }
 }
