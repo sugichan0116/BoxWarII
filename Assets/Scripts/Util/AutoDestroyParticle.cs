@@ -1,8 +1,8 @@
 ﻿using UnityEngine ;
 
 [RequireComponent(typeof(ParticleSystem))]
-public class AutoDestoryParticle : MonoBehaviour {
-
+public class AutoDestroyParticle : MonoBehaviour
+{
 	void Start () {
 		ParticleSystem partcleSystem = GetComponent<ParticleSystem>() ;
 		//Delete object after duration.

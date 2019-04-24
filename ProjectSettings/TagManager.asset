@@ -9,6 +9,7 @@ TagManager:
   - Pool
   - Inventory
   - ItemDetail
+  - Ground
   layers:
   - Default
   - TransparentFX

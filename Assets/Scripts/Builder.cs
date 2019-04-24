@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Builder : MonoBehaviour
 {
+    private static string containerTag = "Pool";
+
     private static GameObject poolFX;
     private static string nameFX = "FX Pool";
 
@@ -14,6 +16,9 @@ public class Builder : MonoBehaviour
     private static GameObject poolBlock;
     private static string nameBlock = "Block Pool";
     
+    private static GameObject poolTweet;
+    private static string nameTweet = "TweetPool";
+
     public static Quaternion Rotate(Vector2 a)
     {
         return Quaternion.Euler(0f, 0f, AngleBetween(Vector2.zero, a));
@@ -40,27 +45,53 @@ public class Builder : MonoBehaviour
             .GetComponent<T>();
     }
 
-    public static void Block(EnduranceBody prefabBody, Vector2 position, Quaternion rotation)
+    public static GameObject FindGameObject(string Tag, string name)
     {
-        if (poolBlock == null) poolBlock = GameObject.Find(nameBlock);
+        return GameObject.FindGameObjectsWithTag(Tag)
+             .FirstOrDefault(value => value.name == name);
+    }
+
+    public static TweetBox TweetBox(TweetBox tweetPrefab, Transform transform)
+    {
+        if (poolTweet == null) poolTweet = FindGameObject(containerTag, nameTweet);
+
+        TweetBox tweet = Instantiate(
+            tweetPrefab, 
+            transform.position,
+            //RectTransformUtility.WorldToScreenPoint(Camera.main, transform.position), 
+            transform.rotation
+            );
+
+        tweet.transform.parent = poolTweet.transform;
+
+        return tweet;
+    }
+
+    public static EnduranceBody Block(EnduranceBody prefabBody, Vector2 position, Quaternion rotation)
+    {
+        if (poolBlock == null) poolBlock = FindGameObject(containerTag, nameBlock);
 
         EnduranceBody body = Instantiate(prefabBody, position, rotation);
         body.transform.parent = poolBlock.transform;
+
+        return body;
     }
 
-    public static void Effecter(ParticleSystem prefabExplosion, Transform transform)
+    public static ParticleSystem Effecter(ParticleSystem prefabExplosion, Transform transform)
     {
-        if(poolFX == null) poolFX = GameObject.Find(nameFX);
+        if(poolFX == null) poolFX = FindGameObject(containerTag, nameFX);
 
         ParticleSystem particle = Instantiate(prefabExplosion, transform.position, transform.rotation);
         particle.transform.parent = poolFX.transform;
+
+        return particle;
     }
 
-    public static void Bullet(Transform transform, 
+    public static BulletBehaviour Bullet(Transform transform, 
         BulletBehaviour prefabBullet, float speed, Vector2 direction, 
         Vector2 firingOffset, string newLayer)
     {
-        if (poolBullet == null) poolBullet = GameObject.Find(nameBullet);
+        if (poolBullet == null) poolBullet = FindGameObject(containerTag, nameBullet);
 
         direction *= speed / direction.magnitude;
         BulletBehaviour bullet = Instantiate(
@@ -72,5 +103,7 @@ public class Builder : MonoBehaviour
         bullet.transform.parent = poolBullet.transform;
         bullet.SetInitialVelocity(direction);
         bullet.gameObject.layer = LayerMask.NameToLayer(newLayer);
+
+        return bullet;
     }
 }
