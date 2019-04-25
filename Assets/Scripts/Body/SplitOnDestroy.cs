@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(SpriteRenderer))]
 public class SplitOnDestroy : BehaviourOnDestroy
 {
     public EnduranceBody prefabBody;
@@ -10,15 +9,8 @@ public class SplitOnDestroy : BehaviourOnDestroy
 
     protected override void DoOnDestroy()
     {
-        //drop item
-        Builder.Block(
-            prefabBody,
-            transform.position,
-            transform.rotation);
-    }
+        Builder.Block(prefabBody, transform);
 
-    private Vector2 SpriteSize()
-    {
-        return GetComponent<SpriteRenderer>().bounds.size;
+        if (prefabSmoke != null) Builder.Effecter(prefabSmoke, transform);
     }
 }

@@ -7,25 +7,18 @@ public class SplitQuadrantOnDestroy : BehaviourOnDestroy
 {
     public EnduranceBody prefabBody;
     public ParticleSystem prefabSmoke;
-
-    //private bool isSplit = false;
-
+    
     protected override void DoOnDestroy()
     {
-        //if (isSplit) return;
-
         Vector2 scale = SpriteSize() / (4 * Mathf.Sqrt(2));
         for (int i = 0; i < 4; i++)
         {
-            Builder.Block(
-                prefabBody,
-                transform.position + Quaternion.Euler(0f, 0f, 90f * i) * scale,
-                transform.rotation);
+            EnduranceBody block = Builder.Block(prefabBody, transform);
+            block.transform.position += Quaternion.Euler(0f, 0f, 90f * i) * scale;
         }
 
         if(prefabSmoke != null) Builder.Effecter(prefabSmoke, transform);
-
-        //isSplit = true;
+        
     }
 
     private Vector2 SpriteSize()

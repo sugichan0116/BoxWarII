@@ -16,6 +16,8 @@ public class StalkerBehaviour : MonoBehaviour
     
     void LateUpdate () 
     {
+        if (target == null) return;
+
         transform.position += (target.transform.position + offset - transform.position) * stalkingRate;
         // = target + offset
     }

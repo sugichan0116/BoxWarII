@@ -10,12 +10,16 @@ public class Timer : MonoBehaviour
         phase += Time.deltaTime;
     }
 
-    public void Init(float time) {
+    public Timer Init(float time) {
         cooltime = time;
         Reset();
+        return this;
     }
 
     public bool IsReady() => (phase >= cooltime);
 
     public void Reset() => phase = 0f;
+
+    public float Now => Mathf.Clamp(phase, 0f, cooltime);
+    public float Timeout => cooltime;
 }

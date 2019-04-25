@@ -7,43 +7,76 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField]
-    private float movingSpeed = 1f;
-    public GunBehaviour gunContainer;
-    public string groundTag = "Ground";
-    public int maxJump = 2;
-    private int jump = 0;
+    private Vector2 move = new Vector2(1f, 20f);
+    [SerializeField]
+    int maxJump = 2;
+    public List<GunBehaviour> guns;
+
+    private Counter jumpCounter;
     private Timer jumpTimer;
 
+    private string groundTag = "Ground";
     private Rigidbody2D rigidbody2;
 
     // Start is called before the first frame update
     void Start()
     {
-        jumpTimer = GetComponent<Timer>();
-        jumpTimer.Init(0.3f);
+        jumpCounter = new Counter(maxJump);
+        jumpTimer = GetComponent<Timer>().Init(0.3f);
 
         rigidbody2 = GetComponent<Rigidbody2D>();
     }
 
-    void FixedUpdate()
-    {
-        Vector2 input = new Vector2(Input.GetAxis("Horizontal"), 0f); //Input.GetAxis("Vertical"));
+    private void Update() => FireGuns();
 
-        if(jump < maxJump && jumpTimer.IsReady() && (Input.GetButtonDown("Jump")))
+    private void FireGuns()
+    {
+        if (Input.GetMouseButtonDown(0))
         {
-            input.y = 20f;
-            jump++;
+            Vector2 playerPosition = RectTransformUtility
+                .WorldToScreenPoint(Camera.main, transform.position);
+            Vector2 mouse = (Vector2)Input.mousePosition - playerPosition;
+
+            foreach (var gun in guns)
+            {
+                gun.Fire(mouse);
+            }
+        }
+    }
+    
+    void FixedUpdate() => Move();
+
+    private void Move()
+    {
+        Vector2 input = new Vector2(Input.GetAxis("Horizontal") * move.x, 0f);
+
+        if (jumpCounter.HaveRoom() && jumpTimer.IsReady() && (Input.GetButtonDown("Jump")))
+        {
+            input.y = move.y;
+            jumpCounter.Count();
             jumpTimer.Reset();
         }
 
-        rigidbody2.AddForce(input * movingSpeed);
+        rigidbody2.AddForce(input);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.collider.gameObject.tag == groundTag)
         {
-            jump = 0;
+            jumpCounter.Reset();
         }
     }
+}
+
+public class Counter {
+    int count, maxCount;
+
+    public Counter(int max) => maxCount = max;
+
+    public void Count() => count++;
+
+    public bool HaveRoom() => count < maxCount;
+
+    public void Reset() => count = 0;
 }

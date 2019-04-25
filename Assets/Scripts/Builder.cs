@@ -6,7 +6,7 @@ using UnityEngine;
 public class Builder : MonoBehaviour
 {
     private static string containerTag = "Pool";
-
+    
     private static GameObject poolFX;
     private static string nameFX = "FX Pool";
 
@@ -19,11 +19,13 @@ public class Builder : MonoBehaviour
     private static GameObject poolTweet;
     private static string nameTweet = "TweetPool";
 
+    //CAUTION : quaternion lookat
     public static Quaternion Rotate(Vector2 a)
     {
         return Quaternion.Euler(0f, 0f, AngleBetween(Vector2.zero, a));
     }
 
+    //CAUTION : quaternion -> angleBetween
     public static float AngleBetween(Vector2 from, Vector2 to)
     {
         float dx = to.x - from.x;
@@ -32,12 +34,13 @@ public class Builder : MonoBehaviour
         return rad * Mathf.Rad2Deg;
     }
 
+    //CAUTION : useless
     public static bool IsSameside(GameObject a, GameObject b)
-    {//collision.collider.gameObject.layer != gameObject.layer
+    {
         return false;
-        //return a.layer == b.layer;//collision.collider.gameObject.tag == gameObject.tag;
     }
 
+    //NOTE : finder
     public static T FindGameObject<T>(string Tag)
     {
         return GameObject.FindGameObjectsWithTag(Tag)
@@ -45,65 +48,56 @@ public class Builder : MonoBehaviour
             .GetComponent<T>();
     }
 
+    //NOTE : finder
     public static GameObject FindGameObject(string Tag, string name)
     {
         return GameObject.FindGameObjectsWithTag(Tag)
              .FirstOrDefault(value => value.name == name);
     }
-
-    public static TweetBox TweetBox(TweetBox tweetPrefab, Transform transform)
+    
+    public static TweetBox TweetBox(TweetBox prefab, Transform trans)
     {
         if (poolTweet == null) poolTweet = FindGameObject(containerTag, nameTweet);
 
-        TweetBox tweet = Instantiate(
-            tweetPrefab, 
-            transform.position,
-            //RectTransformUtility.WorldToScreenPoint(Camera.main, transform.position), 
-            transform.rotation
-            );
-
-        tweet.transform.parent = poolTweet.transform;
-
-        return tweet;
+        return Instantiate(
+            prefab, 
+            trans.position, 
+            trans.rotation, 
+            poolTweet.transform);
     }
 
-    public static EnduranceBody Block(EnduranceBody prefabBody, Vector2 position, Quaternion rotation)
+    public static EnduranceBody Block(EnduranceBody prefab, Transform trans)
     {
         if (poolBlock == null) poolBlock = FindGameObject(containerTag, nameBlock);
-
-        EnduranceBody body = Instantiate(prefabBody, position, rotation);
-        body.transform.parent = poolBlock.transform;
-
-        return body;
+        
+        return Instantiate(
+            prefab, 
+            trans.position, 
+            trans.rotation, 
+            poolBlock.transform);
     }
 
-    public static ParticleSystem Effecter(ParticleSystem prefabExplosion, Transform transform)
+    public static ParticleSystem Effecter(ParticleSystem prefab, Transform trans)
     {
         if(poolFX == null) poolFX = FindGameObject(containerTag, nameFX);
 
-        ParticleSystem particle = Instantiate(prefabExplosion, transform.position, transform.rotation);
-        particle.transform.parent = poolFX.transform;
-
-        return particle;
+        return Instantiate(
+            prefab, 
+            trans.position, 
+            trans.rotation, 
+            poolFX.transform
+            );
     }
 
-    public static BulletBehaviour Bullet(Transform transform, 
-        BulletBehaviour prefabBullet, float speed, Vector2 direction, 
-        Vector2 firingOffset, string newLayer)
+    public static BulletBehaviour Bullet(BulletBehaviour prefab, Transform trans)
     {
         if (poolBullet == null) poolBullet = FindGameObject(containerTag, nameBullet);
 
-        direction *= speed / direction.magnitude;
-        BulletBehaviour bullet = Instantiate(
-            prefabBullet, 
-            transform.position + (Vector3)firingOffset, 
-            transform.rotation
+        return Instantiate(
+            prefab,
+            trans.position,
+            trans.rotation,
+            poolBullet.transform
             );
-
-        bullet.transform.parent = poolBullet.transform;
-        bullet.SetInitialVelocity(direction);
-        bullet.gameObject.layer = LayerMask.NameToLayer(newLayer);
-
-        return bullet;
     }
 }

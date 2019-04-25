@@ -20,7 +20,7 @@ MonoBehaviour:
   text: "\u5927\u304D\u306A\u9ED2\u3044\u5F3E\u4E38.\n\u4E2D\u306B\u306F\u305F\u304F\u3055\u3093\u306E\u706B\u85AC\u304C\u8A70\u307E\u3063\u3066\u3044\u3066,
     \u5F53\u305F\u308B\u3068\u7206\u767A\u3057\u3066\u5439\u304D\u98DB\u3070\u3059."
   Mass: 1
-  FiringSpeed: 100
-  Cooltime: 0.4
+  FiringSpeed: 55
+  Cooltime: 0.8
   prefabBullet: {fileID: 6039534866774545707, guid: 943892ee55fd0c34087562bd56fa9454,
     type: 3}

@@ -29,15 +29,12 @@ public class ShotgunBehaviour : MonoBehaviour
         {
             Vector2 direction = Direction(i, innerBullet);
 
-            Builder.Bullet(
-                transform,
-                prefabBullet,
-                rigidbody2.velocity.magnitude * accelerationRate,
-                direction,
-                Vector2.zero, //direction.normalized
-                LayerMask.LayerToName(gameObject.layer)
-                );
+            BulletBehaviour bullet = Builder.Bullet(prefabBullet, transform);
 
+            float speed = rigidbody2.velocity.magnitude * accelerationRate;
+            bullet.Init(direction.normalized * speed);
+            bullet.gameObject.layer = gameObject.layer;
+            
             Builder.Effecter(prefabExplosion, transform);
         }
 

@@ -22,7 +22,7 @@ public class BulletBehaviour : MonoBehaviour
         transform.rotation = Builder.Rotate(GetComponent<Rigidbody2D>().velocity);
     }
 
-    public void SetInitialVelocity(Vector2 force) => initialVelocity = force;
+    public void Init(Vector2 force) => initialVelocity = force;
 
     protected void OnCollisionEnter2D(Collision2D collision)
     {
