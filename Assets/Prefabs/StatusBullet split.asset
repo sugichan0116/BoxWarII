@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61977502e8f11154986318ea35aaad8b, type: 3}
-  m_Name: StatusBullet
+  m_Name: StatusBullet split
   m_EditorClassIdentifier: 
-  Name: Simple Bullet
+  Name: Shotgun Bullet
   Attribute:
   - Bullet
   - Sub
-  icon: {fileID: 21300000, guid: 46892ef22eb45034bbdf55dac10333dc, type: 3}
-  text: good small bullet.
+  icon: {fileID: 21300004, guid: 46892ef22eb45034bbdf55dac10333dc, type: 3}
+  text: Shotgun bourst small bullets. Destroy all enemy !!!
   Mass: 1
   FiringSpeed: 60
   Cooltime: 0.3
-  prefabBullet: {fileID: 9061863679364332963, guid: dfae2adf38313c54aa970c454e705f29,
+  prefabBullet: {fileID: 5817089609379968199, guid: ebe8721447928614a9063040ea2e6658,
     type: 3}

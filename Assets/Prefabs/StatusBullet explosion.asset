@@ -16,7 +16,7 @@ MonoBehaviour:
   Attribute:
   - Bullet
   - Sub
-  icon: {fileID: 21300004, guid: 11ad40bdfaad6584ea79b5997cf05f7d, type: 3}
+  icon: {fileID: 21300002, guid: 46892ef22eb45034bbdf55dac10333dc, type: 3}
   text: Explosion Bomb ! Strong is Power !
   Mass: 1
   FiringSpeed: 100

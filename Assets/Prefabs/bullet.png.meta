@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 11ad40bdfaad6584ea79b5997cf05f7d
+guid: af1e5d8c4a784524b9adddf01e72747d
 TextureImporter:
   fileIDToRecycleName:
-    21300000: slot_0
-    21300002: slot_1
-    21300004: slot_2
+    21300000: bullet_0
+    21300002: bullet_1
+    21300004: bullet_2
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -87,61 +87,61 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: slot_0
+      name: bullet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 9
+        y: 27
+        width: 46
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 10, y: 10, z: 10, w: 10}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cccfeec8be664f74987b7cefdf3801d5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: slot_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7047258f54ec356438979691a946acf1
+      spriteID: d997a6286cd8b9141bd7ae42144afb6f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: slot_2
+      name: bullet_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 64
-        height: 64
+        x: 73
+        y: 25
+        width: 46
+        height: 14
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ac447ebdc1f95b42bda35962ed877a2
+      spriteID: e009b2c4d68333940ab61bd6fb9da682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bullet_2
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 23
+        width: 53
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb4c4419654c07b45aa8c6d69e2acdf4
       vertices: []
       indices: 
       edges: []
@@ -149,7 +149,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 11e6d09720e311f4da2e819423be44be
+    spriteID: aa2efc63070ca8f4d82321172c1b9182
     vertices: []
     indices: 
     edges: []

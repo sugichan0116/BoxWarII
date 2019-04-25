@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 449463647838465930}
   - component: {fileID: 449463647838465933}
-  - component: {fileID: 449463647838465932}
   - component: {fileID: 449463647838465935}
   - component: {fileID: 449463647838465934}
   - component: {fileID: 7748969400064821992}
   - component: {fileID: 7554543127520627542}
+  - component: {fileID: 7210711390333675280}
   m_Layer: 8
   m_Name: bullet split explosion
   m_TagString: Bullet
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300010, guid: c79720bb5b8b5734a9a6067aecff7cad, type: 3}
+  m_Sprite: {fileID: 21300002, guid: af1e5d8c4a784524b9adddf01e72747d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,37 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &449463647838465932
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 449463647838465921}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.98, y: 0.21}
-    newSize: {x: 0.47, y: 0.1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.48999998, y: 0.105}
-      - {x: -0.48999998, y: -0.105}
-      - {x: 0.04, y: -0.105}
-      - {x: 0.48999998, y: -0.044999998}
-      - {x: 0.48999998, y: 0.074999996}
-      - {x: 0.08, y: 0.105}
 --- !u!50 &449463647838465935
 Rigidbody2D:
   serializedVersion: 4
@@ -127,7 +96,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.18615
+  m_Mass: 0.0644
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -181,3 +150,29 @@ MonoBehaviour:
   timeSplit: 0.3
   errorAngle: 30
   accelerationRate: 4
+--- !u!61 &7210711390333675280
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449463647838465921}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.46, y: 0.14}
+    newSize: {x: 0.47, y: 0.1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.46, y: 0.14}
+  m_EdgeRadius: 0
