@@ -6,24 +6,16 @@ public class CellRequireAttribute : MonoBehaviour
     private CellUnit cell;
     [SerializeField]
     private string attr = "";
-
-
+    
     // Start is called before the first frame update
     void Start()
     {
+        if (attr == "") return;
+
         cell = GetComponent<CellUnit>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (IsValid() == false) cell.OnError();
-    }
-
-    private bool IsValid()
-    {
-        if (attr == "" || cell == null || cell.item == null) return true;
-
-        return cell.item.HaveAttribute(attr);
+        cell.OnChanged += item => {
+            if (item != null && item.HaveAttribute(attr) == false)
+                cell.OnError();
+        };
     }
 }

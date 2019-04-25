@@ -34,4 +34,10 @@ public class ExplosionBehaviour : MonoBehaviour
         }
     }
 
+    public string Text()
+    {
+        return $"属性 : 爆発 \n" +
+            $"　強さ : {strongth} \n" +
+            $"　範囲 : {radius} \n";
+    }
 }

@@ -17,7 +17,7 @@ public class DetailManager : MonoBehaviour
         icon.sprite = item.status.icon;
         header.text = item.status.Name;
         text.text = item.status.text;
-
+        subText.text = item.status.DetailedText();
     }
 }
 /*

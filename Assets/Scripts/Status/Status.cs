@@ -14,7 +14,13 @@ public class Status : ScriptableObject
     public string Name = "name";
     public List<string> Attribute = new List<string>(1);
     public Sprite icon;
+    [Multiline]
     public string text = "good small bullet.";
+
+    public virtual string DetailedText()
+    {
+        return "Attribute : Item";
+    }
 }
 
 

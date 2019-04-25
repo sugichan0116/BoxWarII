@@ -6,38 +6,20 @@ public class EquipManager : MonoBehaviour
 {
     public CellUnit cellBullet;
     public CellUnit cellGun;
-    public Player player;
+    public GunBehaviour container;
 
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        cellBullet.OnChanged += item => {
+            if (item.status is StatusBullet bullet) container.Bullet = bullet;
+            else container.Bullet = null;
+        };
 
-    // Update is called once per frame
-    void Update()
-    {
-        EquipBullet();
-        EquipGun();
+        cellGun.OnChanged += item => {
+            if (item.status is StatusGun gun) container.Gun = gun;
+            else container.Bullet = null;
+        };
     }
-
-    void EquipBullet()
-    {
-        if (cellBullet.item == null) player.gunContainer.bullet = null;
-        else if (cellBullet.item.status is StatusBullet bullet)
-        {
-            player.gunContainer.bullet = bullet;
-        }
-    }
-
-    void EquipGun()
-    {
-        if (cellGun.item == null) player.gunContainer.gun = null;
-        else if (cellGun.item.status is StatusGun gun)
-        {
-            player.gunContainer.gun = gun;
-        }
-    }
-
 
 }

@@ -15,4 +15,24 @@ public class StatusBullet : Status
     public float FiringSpeed = 100f;
     public float Cooltime = 0.3f;
     public BulletBehaviour prefabBullet;
+
+    public override string DetailedText()
+    {
+        return $"基本初速 : {FiringSpeed} m/sec \n" +
+            $"冷却時間 : {Cooltime} sec \n" +
+            SubText();
+    }
+
+    private string SubText()
+    {
+        string text = "";
+
+        ExplosionBehaviour e = prefabBullet.GetComponent<ExplosionBehaviour>();
+        if (e != null) text += e.Text();
+
+        ShotgunBehaviour s = prefabBullet.GetComponent<ShotgunBehaviour>();
+        if (s != null) text += s.Text();
+        
+        return text;
+    }
 }

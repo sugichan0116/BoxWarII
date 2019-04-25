@@ -17,9 +17,10 @@ MonoBehaviour:
   - Bullet
   - Sub
   icon: {fileID: 21300004, guid: 46892ef22eb45034bbdf55dac10333dc, type: 3}
-  text: Shotgun bourst small bullets. Destroy all enemy !!!
+  text: "\u5148\u304C\u3068\u304C\u3063\u3066\u306A\u3044, \u3068\u3066\u3082\u5927\u304D\u306A\u5F3E\u4E38.\n\u4E2D\u306B\u306F\u5225\u306E\u5F3E\u4E38\u304C\u5165\u3063\u3066\u3044\u3066,
+    \u3057\u3070\u3089\u304F\u3059\u308B\u3068\u5206\u88C2\u3059\u308B.\n\u5C11\u3057\u6483\u3064\u306E\u304C\u9045\u3044\u304C\u5F37\u529B\u306A\u5F3E."
   Mass: 1
   FiringSpeed: 60
-  Cooltime: 0.3
+  Cooltime: 0.7
   prefabBullet: {fileID: 5817089609379968199, guid: ebe8721447928614a9063040ea2e6658,
     type: 3}

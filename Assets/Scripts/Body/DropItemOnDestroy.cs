@@ -15,6 +15,8 @@ public class DropItemOnDestroy : BehaviourOnDestroy
     
     protected override void DoOnDestroy()
     {
-        inventory.AddItem(itemTable.GetStatus());
+        ItemUnit item = itemTable.GetItem();
+        inventory.AddItem(item);
+        Destroy(item.gameObject);//つらい
     }
 }

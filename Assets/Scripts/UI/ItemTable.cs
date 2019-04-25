@@ -13,7 +13,7 @@ public class ItemTable : ScriptableObject
     public ItemUnit prefabItem;
     public List<Status> list = new List<Status>();
 
-    public ItemUnit GetStatus()
+    public ItemUnit GetItem()
     {
         ItemUnit item = Instantiate(prefabItem);
         item.status = list[Random.Range(0, list.Count)];

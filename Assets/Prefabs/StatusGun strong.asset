@@ -16,7 +16,7 @@ MonoBehaviour:
   Attribute:
   - Gun
   icon: {fileID: 21300010, guid: c79720bb5b8b5734a9a6067aecff7cad, type: 3}
-  text: Big and Strong. Powerful.
+  text: "\u3068\u3066\u3082\u304A\u304A\u304D\u306A\u7832\u53F0.\n\u901F\u304F\u9060\u304F\u307E\u3067\u98DB\u3070\u305B\u308B.\n\u5927\u304D\u3059\u304E\u3066\u982D\u304C\u5F53\u305F\u308B."
   FiringSpeedRate: 1.5
   CooltimeRate: 1.2
   offset: {x: 0.32, y: 0}

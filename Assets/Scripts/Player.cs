@@ -29,9 +29,9 @@ public class Player : MonoBehaviour
     {
         Vector2 input = new Vector2(Input.GetAxis("Horizontal"), 0f); //Input.GetAxis("Vertical"));
 
-        if(jump < maxJump && jumpTimer.IsReady() && (Input.GetButtonDown("Jump") || Input.GetAxis("Vertical") > 0f))
+        if(jump < maxJump && jumpTimer.IsReady() && (Input.GetButtonDown("Jump")))
         {
-            input.y += 20f;
+            input.y = 20f;
             jump++;
             jumpTimer.Reset();
         }
