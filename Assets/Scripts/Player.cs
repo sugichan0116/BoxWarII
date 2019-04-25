@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Timer))]
 public class Player : MonoBehaviour
 {
     [SerializeField]
@@ -11,32 +12,28 @@ public class Player : MonoBehaviour
     public string groundTag = "Ground";
     public int maxJump = 2;
     private int jump = 0;
-    private float jumpInterval = 0.3f;
-    private float jumpTime = 0f;
+    private Timer jumpTimer;
 
     private Rigidbody2D rigidbody2;
 
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody2 = GetComponent<Rigidbody2D>();
-    }
+        jumpTimer = GetComponent<Timer>();
+        jumpTimer.Init(0.3f);
 
-    // Update is called once per frame
-    void Update()
-    {
-        jumpTime += Time.deltaTime;
+        rigidbody2 = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
     {
         Vector2 input = new Vector2(Input.GetAxis("Horizontal"), 0f); //Input.GetAxis("Vertical"));
 
-        if(jump < maxJump && jumpTime > jumpInterval && (Input.GetButtonDown("Jump") || Input.GetAxis("Vertical") > 0f))
+        if(jump < maxJump && jumpTimer.IsReady() && (Input.GetButtonDown("Jump") || Input.GetAxis("Vertical") > 0f))
         {
             input.y += 20f;
             jump++;
-            jumpTime = 0;
+            jumpTimer.Reset();
         }
 
         rigidbody2.AddForce(input * movingSpeed);

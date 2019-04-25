@@ -5898,6 +5898,7 @@ GameObject:
   - component: {fileID: 1901932568}
   - component: {fileID: 1901932563}
   - component: {fileID: 1901932567}
+  - component: {fileID: 1901932569}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -6051,6 +6052,18 @@ MonoBehaviour:
   gunContainer: {fileID: 1936173898}
   groundTag: Ground
   maxJump: 2
+--- !u!114 &1901932569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901932562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fa1c8f6e70e946419510aeb25244344, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1936173898 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7797329473711486343, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
@@ -7505,6 +7518,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 522228443}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1901932562}
+    - target: {fileID: 7797329473711486337, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300010, guid: c79720bb5b8b5734a9a6067aecff7cad,
+        type: 3}
+    - target: {fileID: 7797329473711486337, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7797329473711486340, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7797329473711486336, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7558,42 +7595,6 @@ PrefabInstance:
     - target: {fileID: 7797329473711486336, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7797329473711486342, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 1901932562}
-    - target: {fileID: 7797329473711486337, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300010, guid: c79720bb5b8b5734a9a6067aecff7cad,
-        type: 3}
-    - target: {fileID: 7797329473711486337, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7797329473711486340, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
-        type: 3}
-      propertyPath: m_Name
-      value: Gun
-      objectReference: {fileID: 0}
-    - target: {fileID: 7797329473711486336, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7797329473711486336, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7797329473711486342, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
-        type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
