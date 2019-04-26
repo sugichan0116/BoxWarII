@@ -705,7 +705,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 378629935}
   - {fileID: 241216693}
   - {fileID: 1900064208}
   m_Father: {fileID: 722733180}
@@ -818,7 +817,7 @@ Transform:
   m_LocalScale: {x: 20, y: 15, z: 1}
   m_Children: []
   m_Father: {fileID: 232471121}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &241216694
 MonoBehaviour:
@@ -1305,133 +1304,6 @@ PrefabInstance:
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a96a4a55a0ab6d4095080dd3a57f763, type: 3}
---- !u!1 &378629934
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 378629935}
-  - component: {fileID: 378629938}
-  - component: {fileID: 378629937}
-  - component: {fileID: 378629936}
-  - component: {fileID: 378629939}
-  - component: {fileID: 378629940}
-  m_Layer: 0
-  m_Name: back
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &378629935
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 378629934}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 20, y: 20, z: 1}
-  m_Children: []
-  m_Father: {fileID: 232471121}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &378629936
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 378629934}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &378629937
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 378629934}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 9447935ca27fed54c9c28112b77d5908, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &378629938
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 378629934}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &378629939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 378629934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 802c951d5039ca5489c091415883216f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 519420028}
-  scale: {x: 30, y: 30}
-  X: 1
-  Y: 1
-  depth: 0.005
---- !u!114 &378629940
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 378629934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2eca8ba93526d0f4a9cbd1a30644a83e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 519420028}
-  stalkingRate: 1
-  X: 1
-  Y: 1
 --- !u!1 &420435991
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,7 +1755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tweetPrefab: {fileID: 4082611507732365060, guid: 3ea260eec1d284e4f849357339ff4f0b,
     type: 3}
-  Text: "\u3053\u3053\u306F \u3069\u3053\u3060\u308D\u3046?"
+  Text: 
 --- !u!61 &514586411
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2923,7 +2795,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f2c4cff045fb384ca0abb6193bede56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweet: []
+  scripts:
+  - "<\u30A2\u30A4\u30C6\u30E0> \u3092 \u88C5\u5099 \u3057\u3088\u3046.  \u7832+\u5F3E
+    = \u767A\u5C04."
+  - "\u7DD1\u306E\u7BB1\u306B\u306F <\u30A2\u30A4\u30C6\u30E0> \u304C \u5165\u3063\u3066\u3044\u307E\u3059."
+  - "\u3053\u3053\u306F \u3069\u3053\u306A\u3093\u3067\u3057\u3087\u3046?"
+  - "\u3086\u304B\u308A\u3055\u3093 \u53EF\u611B\u3044 \u3084\u3063\u305F\u30FC\uFF1F
+    ... \u3088\u304F\u308F\u304B\u3089\u306A\u3044\u3067\u3059."
+  - "\u3053\u308C\u3067 \u5148\u306B \u9032\u3081\u307E\u3059.  \uFF08\u5DE5\u4E8B\u4E2D\uFF09"
   list:
   - {fileID: 1826487067}
   - {fileID: 1170727433}
@@ -4581,7 +4460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tweetPrefab: {fileID: 4082611507732365060, guid: 3ea260eec1d284e4f849357339ff4f0b,
     type: 3}
-  Text: "\u7DD1\u306E\u7BB1\u306B\u306F <\u30A2\u30A4\u30C6\u30E0> \u304C \u5165\u3063\u3066\u3044\u308B."
+  Text: 
 --- !u!61 &1170727434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5319,8 +5198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tweetPrefab: {fileID: 4082611507732365060, guid: 3ea260eec1d284e4f849357339ff4f0b,
     type: 3}
-  Text: "\u3086\u304B\u308A\u3055\u3093 \u53EF\u611B\u3044 \u3084\u3063\u305F\u30FC\uFF1F
-    ... \u3088\u304F\u308F\u304B\u3089\u306A\u3044."
+  Text: 
 --- !u!61 &1314255881
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6762,8 +6640,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tweetPrefab: {fileID: 4082611507732365060, guid: 3ea260eec1d284e4f849357339ff4f0b,
     type: 3}
-  Text: "<\u30A2\u30A4\u30C6\u30E0> \u3092 \u88C5\u5099 \u3057\u3088\u3046.  \u7832+\u5F3E
-    = \u767A\u5C04."
+  Text: 
 --- !u!61 &1826487068
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7312,7 +7189,7 @@ Transform:
   m_LocalScale: {x: 20, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 232471121}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1900064209
 MonoBehaviour:
@@ -7557,7 +7434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c244ab6bd2c6a7e45b3566505a7e985b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 300
+  maxHealth: 105
   robustness: 30
 --- !u!114 &1901932568
 MonoBehaviour:
@@ -8010,7 +7887,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tweetPrefab: {fileID: 4082611507732365060, guid: 3ea260eec1d284e4f849357339ff4f0b,
     type: 3}
-  Text: "\u5148\u306B\u9032\u3081\u308B.  \uFF08\u5DE5\u4E8B\u4E2D\uFF09"
+  Text: 
 --- !u!61 &2036619466
 BoxCollider2D:
   m_ObjectHideFlags: 0
