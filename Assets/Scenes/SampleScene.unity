@@ -709,8 +709,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241216692}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.13, z: 0}
-  m_LocalScale: {x: 20, y: 4, z: 1}
+  m_LocalPosition: {x: 0, y: -9.17, z: 0}
+  m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 232471121}
   m_RootOrder: 1
@@ -730,7 +730,7 @@ MonoBehaviour:
   target: {fileID: 519420028}
   stalkingRate: 1
   X: 1
-  Y: 0
+  Y: 1
 --- !u!114 &241216695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -744,10 +744,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 519420028}
-  scale: {x: 300, y: 60}
+  scale: {x: 256, y: 2560}
   X: 1
-  Y: 0
-  depth: 0.175
+  Y: 1
+  depth: 0.016
 --- !u!64 &241216696
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1220,7 +1220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &378629935
 Transform:
   m_ObjectHideFlags: 0
@@ -1785,7 +1785,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 0}
+  m_BackGroundColor: {r: 0.047169805, g: 0.047169805, b: 0.047169805, a: 1}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -6993,8 +6993,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1900064207}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.05, z: -1}
-  m_LocalScale: {x: 20, y: 2, z: 1}
+  m_LocalPosition: {x: 0, y: -5.69, z: -1}
+  m_LocalScale: {x: 20, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 232471121}
   m_RootOrder: 2
@@ -7014,7 +7014,7 @@ MonoBehaviour:
   target: {fileID: 519420028}
   stalkingRate: 1
   X: 1
-  Y: 0
+  Y: 1
 --- !u!114 &1900064210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7028,10 +7028,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 519420028}
-  scale: {x: 300, y: 60}
+  scale: {x: 256, y: 1024}
   X: 1
-  Y: 0
-  depth: 0.226
+  Y: 1
+  depth: 0.057
 --- !u!64 &1900064211
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7257,6 +7257,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   move: {x: 4, y: 100}
   maxJump: 2
+  jumpInterval: 0.2
+  maxSpeed: 10
   guns:
   - {fileID: 1807870897}
   - {fileID: 1936173898}

@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     private Vector2 move = new Vector2(1f, 20f);
     [SerializeField]
     int maxJump = 2;
+    public float jumpInterval = 0.3f;
+    public float maxSpeed = 10f;
     public List<GunBehaviour> guns;
 
     private Counter jumpCounter;
@@ -22,7 +24,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         jumpCounter = new Counter(maxJump);
-        jumpTimer = GetComponent<Timer>().Init(0.3f);
+        jumpTimer = GetComponent<Timer>().Init(jumpInterval);
 
         rigidbody2 = GetComponent<Rigidbody2D>();
     }
@@ -58,6 +60,7 @@ public class Player : MonoBehaviour
         }
 
         rigidbody2.AddForce(input);
+        rigidbody2.velocity = Vector3.ClampMagnitude(rigidbody2.velocity, maxSpeed);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
