@@ -1,45 +1,41 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class EnduranceBody : MonoBehaviour
 {
     [SerializeField]
-    protected float robustness = 10;
-    private float health, maxHealth;
-    private Rigidbody2D rigidbody2;
+    private float maxHealth = 10f;
+    private float health;
+
+    [SerializeField]
+    private float robustness = 10;
 
     protected void Start()
     {
-        rigidbody2 = GetComponent<Rigidbody2D>();
-        maxHealth = health = rigidbody2.mass * Mathf.Pow(robustness, 2);
+        health = maxHealth;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    float impact = 0f;
+    //    GameObject opponent = collision.rigidbody.gameObject;
+
+    //    //落下ダメージ & 接触ダメージ
+    //    if (opponent.tag == "Ground")
+    //    {
+    //        Vector2 velocity = collision.relativeVelocity;
+    //        impact += Mathf.Pow(velocity.magnitude, 2) / robustness;
+    //    }
+    
+    //}
+    
+    public void Impact(float strongth)
     {
-        if (Builder.IsSameside(collision.collider.gameObject, gameObject)) return;
-
-        if(rigidbody2 == null)
-        {
-            Debug.LogWarning("Rigid Error null");
-            return;
-        }
-
-        Rigidbody2D opponent = collision.rigidbody;
-        Vector2 velocity = ((opponent == null) ? Vector2.zero : opponent.velocity) - rigidbody2.velocity;
-        float impact = Mathf.Pow(velocity.magnitude, 2) * rigidbody2.mass;
-        
-        //Debug.Log(impact);
-        health -= impact;
-
+        health -= Mathf.Max(strongth / 2 - robustness, 0f) 
+            + strongth / 2 * ((robustness >= strongth) ? 0.25f : 1f);
         if (health <= 0f) Destroy(gameObject);
     }
 
-
-    
     public float Health() => health;
     public float MaxHealth() => maxHealth;
-
-
+    
 }

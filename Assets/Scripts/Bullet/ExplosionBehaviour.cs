@@ -8,9 +8,11 @@ public class ExplosionBehaviour : MonoBehaviour
     private Rigidbody2D rigidbody2;
     private bool isExplosion;
     [SerializeField]
-    private float strongth = 1000f;
+    private float destruction = 100f;
     [SerializeField]
-    private float radius = 100f;
+    private float strongth = 100f;
+    [SerializeField]
+    private float radius = 3f;
 
     // Start is called before the first frame update
     void Start()
@@ -31,13 +33,15 @@ public class ExplosionBehaviour : MonoBehaviour
                 
             if(other == null || transform.position == null) continue;
             other.AddExplosionForce(strongth, transform.position, radius);
+            other.gameObject.GetComponent<EnduranceBody>()?.Impact(destruction);
         }
     }
 
     public string Text()
     {
         return $"属性 : 爆発 \n" +
-            $"　強さ : {strongth} \n" +
+            $"　破壊力 : {destruction} \n" +
+            $"　爆風 : {strongth} \n" +
             $"　範囲 : {radius} \n";
     }
 }

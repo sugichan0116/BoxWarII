@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b89db1cef2dc1e246a2684d98cf286b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabBody: {fileID: 4413584410268793723, guid: d5e8364216055a44da7402f2b3bfd0f1,
+  prefabBody: {fileID: 5689813510680644570, guid: 3721e72862144aa4782141c806aa09c5,
     type: 3}
   prefabSmoke: {fileID: 19800002, guid: 6ecf76dc4f268d340b2666896a954bcc, type: 3}
 --- !u!114 &7124125278396956284
@@ -157,4 +157,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c244ab6bd2c6a7e45b3566505a7e985b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  robustness: 50
+  maxHealth: 1200
+  robustness: 30

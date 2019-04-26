@@ -6,8 +6,13 @@ using UnityEngine;
 public class BulletBehaviour : MonoBehaviour
 {
     public ParticleSystem prefabExplosion;
-    protected Rigidbody2D rigidbody2;
+    [SerializeField]
+    private float destruction = 10f;
+    
+    private Rigidbody2D rigidbody2;
     private Vector2 initialVelocity = Vector2.zero;
+
+    public float Destruction { get => destruction; private set => destruction = value; }
 
     // Start is called before the first frame update
     void Start()
@@ -22,13 +27,22 @@ public class BulletBehaviour : MonoBehaviour
         transform.rotation = Builder.Rotate(GetComponent<Rigidbody2D>().velocity);
     }
 
-    public void Init(Vector2 force) => initialVelocity = force;
+    public void Init(Vector2 force, float destruct)
+    {
+        initialVelocity = force;
+        destruction = destruct;
+    }
 
     protected void OnCollisionEnter2D(Collision2D collision)
     {
-        if (Builder.IsSameside(collision.collider.gameObject, gameObject)) return;
-        
+        //if (Builder.IsSameside(collision.collider.gameObject, gameObject)) return;
+
+        EnduranceBody body = collision.collider.gameObject.GetComponent<EnduranceBody>();
+        body?.Impact(KineticEnergy());
+
         Builder.Effecter(prefabExplosion, transform);
         Destroy(gameObject);
     }
+
+    public float KineticEnergy() => destruction;// * Mathf.Pow(rigidbody2.velocity.magnitude, 2);
 }

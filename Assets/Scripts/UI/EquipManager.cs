@@ -12,13 +12,23 @@ public class EquipManager : MonoBehaviour
     void Start()
     {
         cellBullet.OnChanged += item => {
+            if (item == null)
+            {
+                container.Bullet = null;
+                return;
+            }
             if (item.status is StatusBullet bullet) container.Bullet = bullet;
             else container.Bullet = null;
         };
 
         cellGun.OnChanged += item => {
+            if (item == null)
+            {
+                container.Gun = null;
+                return;
+            }
             if (item.status is StatusGun gun) container.Gun = gun;
-            else container.Bullet = null;
+            else container.Gun = null;
         };
     }
 

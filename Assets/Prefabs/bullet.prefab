@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c244ab6bd2c6a7e45b3566505a7e985b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   robustness: 10
 --- !u!114 &9061863679364332963
 MonoBehaviour:
@@ -130,6 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabExplosion: {fileID: 19800002, guid: 00fedc70b62a31e448e8ccc298257b56, type: 3}
+  destruction: 15
 --- !u!61 &5757401996631315985
 BoxCollider2D:
   m_ObjectHideFlags: 0

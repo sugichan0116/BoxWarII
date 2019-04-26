@@ -15,6 +15,7 @@ public class ShotgunBehaviour : MonoBehaviour
     private float errorAngle = 30f;
     [SerializeField]
     private float accelerationRate = 1f;
+
     private Rigidbody2D rigidbody2;
 
     private void Start()
@@ -32,7 +33,7 @@ public class ShotgunBehaviour : MonoBehaviour
             BulletBehaviour bullet = Builder.Bullet(prefabBullet, transform);
 
             float speed = rigidbody2.velocity.magnitude * accelerationRate;
-            bullet.Init(direction.normalized * speed);
+            bullet.Init(direction.normalized * speed, prefabBullet.Destruction);
             bullet.gameObject.layer = gameObject.layer;
             
             Builder.Effecter(prefabExplosion, transform);

@@ -117,6 +117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c244ab6bd2c6a7e45b3566505a7e985b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
   robustness: 10
 --- !u!114 &6039534866774545707
 MonoBehaviour:
@@ -131,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabExplosion: {fileID: 19800008, guid: 7075bd5fe1480184695a32611c15da57, type: 3}
+  destruction: 10
 --- !u!114 &8067847295032838963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,8 +145,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0755c8e7af8681043803785f2d9aeb13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destruction: 85
   strongth: 100
-  radius: 100
+  radius: 1
 --- !u!61 &8878968192053493779
 BoxCollider2D:
   m_ObjectHideFlags: 0

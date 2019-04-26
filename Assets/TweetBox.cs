@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[SerializeField]
 public class TweetBox : MonoBehaviour
 {
     public Vector2 offset;

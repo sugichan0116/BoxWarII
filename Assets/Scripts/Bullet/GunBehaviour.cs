@@ -14,20 +14,13 @@ public class GunBehaviour : MonoBehaviour
     private Timer fireTimer;
 
     private string layer;
+    private bool IsInit = false;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        fireTimer = GetComponent<Timer>();
-        fireTimer.Init(0.3f);
-
-        GetComponent<SpriteRenderer>().sprite = null;
-        layer = LayerMask.LayerToName(gameObject.layer);
-    }
+    void Start() => Init();
     
-    public void Fire(Vector2 target)
+    public bool Fire(Vector2 target)
     {
-        if (Gun == null || Bullet == null) return;
+        if (Gun == null || Bullet == null) return false;
 
         if (fireTimer.IsReady())
         {
@@ -36,25 +29,42 @@ public class GunBehaviour : MonoBehaviour
                 transform
                 );
 
-            bullet.Init(target.normalized * Gun.FiringSpeedRate * Bullet.FiringSpeed);
+            bullet.Init(
+                target.normalized * Gun.FiringSpeedRate * Bullet.FiringSpeed,
+                Bullet.prefabBullet.Destruction);
             bullet.gameObject.layer = LayerMask.NameToLayer(layer + "Bullet");
             
             fireTimer.Reset();
+            return true;
         }
+
+        return false;
     }
     
     private void Refresh()
     {
+        Init();
         GetComponent<SpriteRenderer>().sprite = Gun?.icon;
 
-        if(Gun != null)
+        if (Gun != null)
         {
             transform.localPosition = Gun.offset;
             if (Bullet != null)
             {
-                fireTimer.Init(Gun.CooltimeRate * Bullet.Cooltime);
+                fireTimer = GetComponent<Timer>().Init(Gun.CooltimeRate * Bullet.Cooltime);
             }
         }
+    }
+
+    private void Init()
+    {
+        if (IsInit) return;
+        IsInit = true;
+
+        fireTimer = GetComponent<Timer>().Init(0.3f);
+
+        GetComponent<SpriteRenderer>().sprite = null;
+        layer = LayerMask.LayerToName(gameObject.layer);
     }
 
     public Timer Cooltime() => fireTimer;

@@ -5,6 +5,7 @@ using UnityEngine;
 public class EventRegion : MonoBehaviour
 {
     public TweetBox tweetPrefab;
+    public string Text;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,6 @@ public class EventRegion : MonoBehaviour
         if (collision.transform.gameObject.tag != "Player") return;
 
         TweetBox tweet = Builder.TweetBox(tweetPrefab, transform);
-        tweet.text = "ゆかりさんを崇めるのじゃ…………はあ尊い";
+        tweet.text = Text;
     }
 }

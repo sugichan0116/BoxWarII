@@ -17,7 +17,7 @@ public class StatusGun : Status
 
     public override string DetailedText()
     {
-        return $"初速倍率 : x {FiringSpeedRate} \n" +
-            $"冷却倍率 : x {CooltimeRate} \n";
+        return $"加速率 : x {FiringSpeedRate} \n" +
+            $"冷却効率 : x {CooltimeRate} \n";
     }
 }

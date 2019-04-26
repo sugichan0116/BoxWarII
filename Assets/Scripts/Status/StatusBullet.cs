@@ -11,14 +11,14 @@ using UnityEngine.UI;
 [System.Serializable]
 public class StatusBullet : Status
 {
-    public float Mass = 1f;
     public float FiringSpeed = 100f;
     public float Cooltime = 0.3f;
     public BulletBehaviour prefabBullet;
 
     public override string DetailedText()
     {
-        return $"基本初速 : {FiringSpeed} m/sec \n" +
+        return $"破壊力 : {prefabBullet.Destruction} \n" +
+            $"基本初速 : {FiringSpeed} m/sec \n" +
             $"冷却時間 : {Cooltime} sec \n" +
             SubText();
     }
