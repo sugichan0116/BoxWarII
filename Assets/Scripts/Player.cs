@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(Timer))]
@@ -33,7 +34,7 @@ public class Player : MonoBehaviour
 
     private void FireGuns()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !IsPointerOverUIObject())
         {
             Vector2 playerPosition = RectTransformUtility
                 .WorldToScreenPoint(Camera.main, transform.position);
@@ -45,7 +46,17 @@ public class Player : MonoBehaviour
             }
         }
     }
-    
+
+    private bool IsPointerOverUIObject()
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
+    }
+
     void FixedUpdate() => Move();
 
     private void Move()

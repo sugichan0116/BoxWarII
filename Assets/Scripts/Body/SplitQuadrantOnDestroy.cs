@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
-public class SplitQuadrantOnDestroy : BehaviourOnDestroy
+[RequireComponent(typeof(EnduranceBody))]
+public class SplitQuadrantOnDestroy : MonoBehaviour
 {
     public EnduranceBody prefabBody;
     public ParticleSystem prefabSmoke;
-    
-    protected override void DoOnDestroy()
+
+    private void Start()
+    {
+        GetComponent<EnduranceBody>().OnDestroy += DoOnDestroy;
+    }
+
+    private void DoOnDestroy()
     {
         Vector2 scale = SpriteSize() / (4 * Mathf.Sqrt(2));
         for (int i = 0; i < 4; i++)

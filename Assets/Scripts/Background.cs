@@ -3,7 +3,7 @@
 public class Background : MonoBehaviour
 {
     // スクロールするスピード
-    public GameObject target;
+    private GameObject target;
     public Vector2 scale;
     public bool X = true, Y = true;
     private Vector3 offset;
@@ -12,6 +12,7 @@ public class Background : MonoBehaviour
 
     private void Start()
     {
+        target = Camera.main.gameObject;
         offset = target.transform.position;
     }
 

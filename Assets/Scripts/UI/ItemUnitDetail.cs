@@ -2,7 +2,7 @@
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(ItemUnit))]
-public class ItemUnitOnHover : MonoBehaviour, IPointerEnterHandler
+public class ItemUnitDetail : MonoBehaviour, IPointerEnterHandler
 {
     private DetailManager manager;
 

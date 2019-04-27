@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class EventRegion : MonoBehaviour
+public class TweetRegion : MonoBehaviour
 {
     public TweetBox tweetPrefab;
     public string Text;

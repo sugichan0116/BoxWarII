@@ -9,6 +9,10 @@ public class EnduranceBody : MonoBehaviour
     [SerializeField]
     private float robustness = 10;
 
+    public delegate void EventHandlerB();
+
+    public event EventHandlerB OnDestroy;
+
     protected void Start()
     {
         health = maxHealth;
@@ -32,7 +36,12 @@ public class EnduranceBody : MonoBehaviour
     {
         health -= Mathf.Max(strongth / 2 - robustness, 0f) 
             + strongth / 2 * ((robustness >= strongth) ? 0.25f : 1f);
-        if (health <= 0f) Destroy(gameObject);
+
+        if (health <= 0f)
+        {
+            OnDestroy?.Invoke();
+            Destroy(gameObject);
+        }
     }
 
     public float Health() => health;

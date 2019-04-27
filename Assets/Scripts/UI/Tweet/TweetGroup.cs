@@ -8,7 +8,7 @@ public class TweetGroup : MonoBehaviour
     [SerializeField]
     public List<string> scripts;
     [SerializeField]
-    public List<EventRegion> list;
+    public List<TweetRegion> list;
 
     // Start is called before the first frame update
     void Start()

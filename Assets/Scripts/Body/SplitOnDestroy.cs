@@ -2,12 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SplitOnDestroy : BehaviourOnDestroy
+[RequireComponent(typeof(EnduranceBody))]
+public class SplitOnDestroy : MonoBehaviour
 {
     public EnduranceBody prefabBody;
     public ParticleSystem prefabSmoke;
 
-    protected override void DoOnDestroy()
+    private void Start()
+    {
+        GetComponent<EnduranceBody>().OnDestroy += DoOnDestroy;
+    }
+
+    private void DoOnDestroy()
     {
         Builder.Block(prefabBody, transform);
 

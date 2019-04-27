@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class DropItemOnDestroy : BehaviourOnDestroy
+[RequireComponent(typeof(EnduranceBody))]
+public class DropItemOnDestroy : MonoBehaviour
 {
     public ItemTable itemTable;
     private InventoryUnit inventory;
     
     void Start()
     {
+        GetComponent<EnduranceBody>().OnDestroy += DoOnDestroy;
         inventory = Builder.FindGameObject<InventoryUnit>("Inventory");
     }
     
-    protected override void DoOnDestroy()
+    private void DoOnDestroy()
     {
         ItemUnit item = itemTable.GetItem();
         inventory.AddItem(item);

@@ -10,6 +10,8 @@ TagManager:
   - Inventory
   - ItemDetail
   - Ground
+  - SceneSwitch
+  - Gate
   layers:
   - Default
   - TransparentFX
