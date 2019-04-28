@@ -4,38 +4,27 @@ using UnityEngine;
 [RequireComponent(typeof(Image))]
 public class CellUnit : MonoBehaviour
 {
-    public Color error = new Color();
+    public Color error = Color.red;
+    public Color success = Color.green;
     private ItemUnit item;
 
     public delegate void EventHandler(ItemUnit item);
-
     public event EventHandler OnChanged;
+    
+    private void Update() => UpdateItem();
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    private void Update()
-    {
-        UpdateItem();
-    }
-
-    public void OnError()
-    {
-
-        Image bg = GetComponent<Image>();
-        bg.color = error;
-    }
-
-    public void UpdateItem()
+    private void UpdateItem()
     {
         ItemUnit old = item;
         item = GetComponentInChildren<ItemUnit>();
-        if(old != item)
+        if (old != item)
         {
             OnChanged(item);
         }
     }
+
+    public void OnSuccess() => GetComponent<Image>().color = success;
+    public void OnError() => GetComponent<Image>().color = error;
+
+    public void OnUsed() => GetComponent<DragAndDropCell>().RemoveItem();
 }

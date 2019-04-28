@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EquipManager : MonoBehaviour
+public class EquipGun : MonoBehaviour
 {
     public CellUnit cellBullet;
     public CellUnit cellGun;

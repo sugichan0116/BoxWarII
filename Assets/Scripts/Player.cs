@@ -1,40 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Timer))]
+[RequireComponent(typeof(EnduranceBody))]
+[RequireComponent(typeof(PlayerMove))]
 public class Player : MonoBehaviour
 {
-    [SerializeField]
-    private Vector2 move = new Vector2(1f, 20f);
-    [SerializeField]
-    int maxJump = 2;
-    public float jumpInterval = 0.3f;
-    public float maxSpeed = 10f;
     public List<GunBehaviour> guns;
-
-    private Counter jumpCounter;
-    private Timer jumpTimer;
-
-    private string groundTag = "Ground";
-    private Rigidbody2D rigidbody2;
-
+    public PlayerMove Move;
+    
     // Start is called before the first frame update
     void Start()
     {
-        jumpCounter = new Counter(maxJump);
-        jumpTimer = GetComponent<Timer>().Init(jumpInterval);
-
-        rigidbody2 = GetComponent<Rigidbody2D>();
+        Move = GetComponent<PlayerMove>();
     }
 
     private void Update() => FireGuns();
 
     private void FireGuns()
     {
-        if (Input.GetMouseButtonDown(0) && !IsPointerOverUIObject())
+        if (Input.GetMouseButtonDown(0) && Builder.IsPointerOverUIObject() == false)
         {
             Vector2 playerPosition = RectTransformUtility
                 .WorldToScreenPoint(Camera.main, transform.position);
@@ -47,50 +32,14 @@ public class Player : MonoBehaviour
         }
     }
 
-    private bool IsPointerOverUIObject()
+    public void UseItem(StatusItem item)
     {
-        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
-        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        EnduranceBody body = GetComponent<EnduranceBody>();
 
-        List<RaycastResult> results = new List<RaycastResult>();
-        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
-        return results.Count > 0;
-    }
-
-    void FixedUpdate() => Move();
-
-    private void Move()
-    {
-        Vector2 input = new Vector2(Input.GetAxis("Horizontal") * move.x, 0f);
-
-        if (jumpCounter.HaveRoom() && jumpTimer.IsReady() && (Input.GetButtonDown("Jump")))
+        if(item.Type == ItemAttribute.Repair)
         {
-            input.y = move.y;
-            jumpCounter.Count();
-            jumpTimer.Reset();
-        }
-
-        rigidbody2.AddForce(input);
-        rigidbody2.velocity = Vector3.ClampMagnitude(rigidbody2.velocity, maxSpeed);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.collider.gameObject.tag == groundTag)
-        {
-            jumpCounter.Reset();
+            body.AddHealth(item.strongth);
         }
     }
-}
 
-public class Counter {
-    int count, maxCount;
-
-    public Counter(int max) => maxCount = max;
-
-    public void Count() => count++;
-
-    public bool HaveRoom() => count < maxCount;
-
-    public void Reset() => count = 0;
 }

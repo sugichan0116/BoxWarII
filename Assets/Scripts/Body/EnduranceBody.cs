@@ -46,5 +46,7 @@ public class EnduranceBody : MonoBehaviour
 
     public float Health() => health;
     public float MaxHealth() => maxHealth;
-    
+    public void AddHealth(float value) => health = Mathf.Clamp(health + value, 0, maxHealth);
+    public void AddMaxHealth(float value) => maxHealth += value;
+
 }

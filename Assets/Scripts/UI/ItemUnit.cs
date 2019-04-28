@@ -18,8 +18,15 @@ public class ItemUnit : MonoBehaviour
         return GetComponent<DragAndDropItem>();
     }
 
-    public bool HaveAttribute(string attr)
+    public bool HaveAttribute(StatusAttribute attr)
     {
+        string d = "@ + " + attr + " // ";
+        foreach (var item in status.Attribute)
+        {
+            d += item;
+        }
+
+        Debug.Log(d + status.Attribute.Contains(attr));
         return status.Attribute.Contains(attr);
     }
 }

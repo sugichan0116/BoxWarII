@@ -23,7 +23,6 @@ public class ExplosionBehaviour : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision) {
         if(isExplosion) return;
-        if (Builder.IsSameside(collision.collider.gameObject, gameObject)) return;
 
         isExplosion = true;
         foreach(Collider2D collider in 

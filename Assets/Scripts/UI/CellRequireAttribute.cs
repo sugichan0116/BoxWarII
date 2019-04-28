@@ -5,17 +5,19 @@ public class CellRequireAttribute : MonoBehaviour
 {
     private CellUnit cell;
     [SerializeField]
-    private string attr = "";
+    private StatusAttribute attr = StatusAttribute.Default;
     
     // Start is called before the first frame update
     void Start()
     {
-        if (attr == "") return;
+        if (attr == StatusAttribute.Default) return;
 
         cell = GetComponent<CellUnit>();
         cell.OnChanged += item => {
-            if (item != null && item.HaveAttribute(attr) == false)
-                cell.OnError();
+            if (item == null) return;
+
+            if (item.HaveAttribute(attr)) cell.OnSuccess();
+            else cell.OnError();
         };
     }
 }

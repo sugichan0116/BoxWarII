@@ -13,6 +13,8 @@ public class DummyControlUnit : MonoBehaviour
     /// <param name="desc"> request or event descriptor </param>
     void OnSimpleDragAndDropEvent(DragAndDropCell.DropEventDescriptor desc)
     {
+        return;
+
         // Get control unit of source cell
         DummyControlUnit sourceSheet = desc.sourceCell.GetComponentInParent<DummyControlUnit>();
         // Get control unit of destination cell

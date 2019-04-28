@@ -12,7 +12,7 @@ using UnityEngine.UI;
 public class Status : ScriptableObject
 {
     public string Name = "name";
-    public List<string> Attribute = new List<string>(1);
+    public List<StatusAttribute> Attribute = new List<StatusAttribute> { StatusAttribute.Default };
     public Sprite icon;
     [Multiline]
     public string text = "good small bullet.";
@@ -23,6 +23,17 @@ public class Status : ScriptableObject
     }
 }
 
+
+public enum StatusAttribute
+{
+    Default,
+    Main,
+    Sub,
+    Robot,
+    Gun,
+    Bullet,
+    Item
+}
 
 /*
 [CreateAssetMenu(

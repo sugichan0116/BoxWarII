@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Builder : MonoBehaviour
 {
@@ -33,13 +34,7 @@ public class Builder : MonoBehaviour
         float rad = Mathf.Atan2(dy, dx);
         return rad * Mathf.Rad2Deg;
     }
-
-    //CAUTION : useless
-    public static bool IsSameside(GameObject a, GameObject b)
-    {
-        return false;
-    }
-
+    
     //NOTE : finder
     public static T FindGameObject<T>(string Tag)
     {
@@ -55,6 +50,18 @@ public class Builder : MonoBehaviour
              .FirstOrDefault(value => value.name == name);
     }
     
+    //NOTE : util
+    public static bool IsPointerOverUIObject()
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
+    }
+
+
     public static TweetBox TweetBox(TweetBox prefab, Transform trans)
     {
         if (poolTweet == null) poolTweet = FindGameObject(containerTag, nameTweet);
@@ -99,5 +106,12 @@ public class Builder : MonoBehaviour
             trans.rotation,
             poolBullet.transform
             );
+    }
+
+    public static void Init()
+    {
+        poolBullet = null;
+        poolFX = null;
+        poolBlock = null;
     }
 }

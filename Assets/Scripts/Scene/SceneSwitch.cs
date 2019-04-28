@@ -24,6 +24,7 @@ public class SceneSwitch : MonoBehaviour
 
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        Builder.Init();
         Warp();
     }
 

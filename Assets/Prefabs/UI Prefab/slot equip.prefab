@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   error: {r: 1, g: 0.60990745, b: 0, a: 0.73333335}
-  item: {fileID: 0}
+  success: {r: 0.092196584, g: 1, b: 0, a: 1}
 --- !u!114 &2234461432204020460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 016f8c66674910446824a4098acd4144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attr: Bullet
+  attr: 0
 --- !u!1 &2234461430865088133
 GameObject:
   m_ObjectHideFlags: 0
