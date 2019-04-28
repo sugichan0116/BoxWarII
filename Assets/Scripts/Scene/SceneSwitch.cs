@@ -34,16 +34,17 @@ public class SceneSwitch : MonoBehaviour
         SceneManager.GetActiveScene().name);
 
         GameObject target = GameObject.FindGameObjectsWithTag("Gate")
-             .Where(value => value.GetComponent<SwitchRegion>() != null)
-             .FirstOrDefault(value => value.GetComponent<SwitchRegion>().ID == id);
+             .Where(value => value.GetComponent<GateRegion>() != null)
+             .FirstOrDefault(value => value.GetComponent<GateRegion>().ID == id);
 
 
         foreach (var item in GameObject.FindGameObjectsWithTag("Gate"))
         {
-            SwitchRegion r = item.GetComponent<SwitchRegion>();
+            GateRegion r = item.GetComponent<GateRegion>();
             if (r != null) Debug.Log(r.ID);
         }
 
         player.transform.position = target.transform.position;
+        player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 }

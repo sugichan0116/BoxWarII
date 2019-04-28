@@ -209,79 +209,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &75036613
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 75036614}
-  - component: {fileID: 75036616}
-  - component: {fileID: 75036615}
-  m_Layer: 0
-  m_Name: EventRegion (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &75036614
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75036613}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 53.04, y: -2.0200005, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
-  m_Children: []
-  m_Father: {fileID: 96444300}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &75036615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75036613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 118dce24bef8fd441ab1a311883311d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tweetPrefab: {fileID: 4082611507732365060, guid: 3ea260eec1d284e4f849357339ff4f0b,
-    type: 3}
-  Text: 
---- !u!61 &75036616
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75036613}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!1 &96444299
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,7 +241,6 @@ Transform:
   - {fileID: 146248255}
   - {fileID: 1819374295}
   - {fileID: 2005470650}
-  - {fileID: 75036614}
   m_Father: {fileID: 1171427525}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -337,13 +263,11 @@ MonoBehaviour:
   - "\u3053\u3053\u306F \u3069\u3053\u306A\u3093\u3067\u3057\u3087\u3046?"
   - "\u3086\u304B\u308A\u3055\u3093 \u53EF\u611B\u3044 \u3084\u3063\u305F\u30FC\uFF1F
     ... \u3088\u304F\u308F\u304B\u3089\u306A\u3044\u3067\u3059."
-  - "\u3053\u308C\u3067 \u5148\u306B \u9032\u3081\u307E\u3059.  \uFF08\u5DE5\u4E8B\u4E2D\uFF09"
   list:
   - {fileID: 1673453033}
   - {fileID: 146248256}
   - {fileID: 1819374296}
   - {fileID: 2005470651}
-  - {fileID: 75036615}
 --- !u!1 &99917715
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,6 +603,7 @@ GameObject:
   - component: {fileID: 146248255}
   - component: {fileID: 146248257}
   - component: {fileID: 146248256}
+  - component: {fileID: 146248258}
   m_Layer: 0
   m_Name: EventRegion (2)
   m_TagString: Untagged
@@ -741,6 +666,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &146248258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146248254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ed698f2d017604fac9ab35ab091b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &154570021
 GameObject:
   m_ObjectHideFlags: 0
@@ -3757,6 +3694,7 @@ GameObject:
   - component: {fileID: 789684266}
   - component: {fileID: 789684268}
   - component: {fileID: 789684267}
+  - component: {fileID: 789684269}
   m_Layer: 0
   m_Name: GateRegion (1)
   m_TagString: Gate
@@ -3820,6 +3758,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &789684269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789684265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ed698f2d017604fac9ab35ab091b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &801535000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7529,6 +7479,7 @@ GameObject:
   - component: {fileID: 1673453032}
   - component: {fileID: 1673453034}
   - component: {fileID: 1673453033}
+  - component: {fileID: 1673453035}
   m_Layer: 0
   m_Name: EventRegion
   m_TagString: Untagged
@@ -7591,6 +7542,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1673453035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673453031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ed698f2d017604fac9ab35ab091b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1677005012
 GameObject:
   m_ObjectHideFlags: 0
@@ -7602,6 +7565,7 @@ GameObject:
   - component: {fileID: 1677005013}
   - component: {fileID: 1677005015}
   - component: {fileID: 1677005014}
+  - component: {fileID: 1677005016}
   m_Layer: 0
   m_Name: GateRegion
   m_TagString: Gate
@@ -7665,6 +7629,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1677005016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677005012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ed698f2d017604fac9ab35ab091b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1684097004
 GameObject:
   m_ObjectHideFlags: 0
@@ -7996,6 +7972,7 @@ GameObject:
   - component: {fileID: 1819374295}
   - component: {fileID: 1819374297}
   - component: {fileID: 1819374296}
+  - component: {fileID: 1819374298}
   m_Layer: 0
   m_Name: EventRegion (3)
   m_TagString: Untagged
@@ -8058,6 +8035,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1819374298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819374294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ed698f2d017604fac9ab35ab091b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1902998205
 GameObject:
   m_ObjectHideFlags: 0
@@ -8263,6 +8252,7 @@ GameObject:
   - component: {fileID: 2005470650}
   - component: {fileID: 2005470652}
   - component: {fileID: 2005470651}
+  - component: {fileID: 2005470653}
   m_Layer: 0
   m_Name: EventRegion (1)
   m_TagString: Untagged
@@ -8325,6 +8315,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2005470653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005470649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ed698f2d017604fac9ab35ab091b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2074279794
 GameObject:
   m_ObjectHideFlags: 0

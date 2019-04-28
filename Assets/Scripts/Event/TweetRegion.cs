@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(VisualizeOnEditor))]
 [System.Serializable]
 public class TweetRegion : MonoBehaviour
 {
