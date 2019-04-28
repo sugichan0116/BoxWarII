@@ -51,9 +51,8 @@ public class ShotgunBehaviour : MonoBehaviour
     public string Text()
     {
         return $"属性 : 分裂 \n" +
-            $"　内部弾 : {innerBullet} \n" +
-            $"　分裂時間 : {timeSplit} \n" +
-            $"　分裂加速率 : {accelerationRate} \n" +
-            $"　誤差角 : {errorAngle} \n";
+            $"　内部弾 : x {innerBullet} \n" +
+            $"　分裂加速率 : x {accelerationRate} \n" +
+            $"　誤差角 : ±{errorAngle}° \n";
     }
 }

@@ -17,6 +17,9 @@ MonoBehaviour:
   icon: {fileID: 21300006, guid: c79720bb5b8b5734a9a6067aecff7cad, type: 3}
   text: "\u6A19\u6E96\u30B5\u30A4\u30BA\u306E\u7832\u53F0.\n\u5973\u306E\u5B50\u304C\u6301\u3064\u306B\u306F\u91CD\u3059\u304E\u308B.
     ><;"
+  Destruction: 10
   FiringSpeedRate: 1
   CooltimeRate: 1
+  Muzzles:
+  - {x: 0, y: 0}
   offset: {x: 0.16, y: 0}

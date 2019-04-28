@@ -24,16 +24,21 @@ public class GunBehaviour : MonoBehaviour
 
         if (fireTimer.IsReady())
         {
-            BulletBehaviour bullet = Builder.Bullet(
+            foreach (var muzzle in gun.Muzzles)
+            {
+                BulletBehaviour bullet = Builder.Bullet(
                 Bullet.prefabBullet,
                 transform
                 );
 
-            bullet.Init(
-                target.normalized * Gun.FiringSpeedRate * Bullet.FiringSpeed,
-                Bullet.prefabBullet.Destruction);
-            bullet.gameObject.layer = LayerMask.NameToLayer(layer + "Bullet");
-            
+                Vector2 force = target.normalized * Gun.FiringSpeedRate * Bullet.FiringSpeed;
+                float destruction = Bullet.prefabBullet.Destruction + gun.Destruction;
+
+                bullet.Init(force, destruction);
+                bullet.transform.position += new Vector3(muzzle.x, muzzle.y);
+                bullet.gameObject.layer = LayerMask.NameToLayer(layer + "Bullet");
+            }
+
             fireTimer.Reset();
             return true;
         }

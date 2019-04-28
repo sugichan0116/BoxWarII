@@ -10,15 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca590c14f6f0b2344a75df429109fbed, type: 3}
-  m_Name: StatusGun strong
+  m_Name: StatusGun triplet
   m_EditorClassIdentifier: 
-  Name: Gun Strong
+  Name: Triplet Gun
   Attribute: 04000000
-  icon: {fileID: 21300010, guid: c79720bb5b8b5734a9a6067aecff7cad, type: 3}
-  text: "\u3068\u3066\u3082\u304A\u304A\u304D\u306A\u7832\u53F0.\n\u901F\u304F\u9060\u304F\u307E\u3067\u98DB\u3070\u305B\u308B.\n\u5927\u304D\u3059\u304E\u3066\u982D\u304C\u5F53\u305F\u308B."
-  Destruction: 40
-  FiringSpeedRate: 1.4
-  CooltimeRate: 1.2
+  icon: {fileID: 21300008, guid: c79720bb5b8b5734a9a6067aecff7cad, type: 3}
+  text: "\uFF13\u9580\u306E\u7832\u53F0"
+  Destruction: 0
+  FiringSpeedRate: 0.92
+  CooltimeRate: 1.4
   Muzzles:
+  - {x: 0, y: -0.3}
   - {x: 0, y: 0}
+  - {x: 0, y: 0.3}
   offset: {x: 0.32, y: 0}

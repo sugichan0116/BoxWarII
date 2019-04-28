@@ -8,6 +8,7 @@ public class SplitQuadrantOnDestroy : MonoBehaviour
 {
     public EnduranceBody prefabBody;
     public ParticleSystem prefabSmoke;
+    private bool isDestroy = false;
 
     private void Start()
     {
@@ -16,6 +17,9 @@ public class SplitQuadrantOnDestroy : MonoBehaviour
 
     private void DoOnDestroy()
     {
+        if (isDestroy) return;
+        isDestroy = true;
+
         Vector2 scale = SpriteSize() / (4 * Mathf.Sqrt(2));
         for (int i = 0; i < 4; i++)
         {

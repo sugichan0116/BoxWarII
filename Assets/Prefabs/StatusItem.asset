@@ -15,6 +15,6 @@ MonoBehaviour:
   Name: EnergyTin
   Attribute: 06000000
   icon: {fileID: 21300004, guid: 4a9e53adcd2331040848f3fc1a304715, type: 3}
-  text: "\u56DE\u5FA9 \u3057\u307E\u3059."
+  text: "\u56DE\u5FA9 \u3057\u307E\u3059.\nHealth ++"
   Type: 1
   strongth: 60

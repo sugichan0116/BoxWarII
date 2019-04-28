@@ -15,7 +15,8 @@ public class StatusItem : Status
 
     public override string DetailedText()
     {
-        return "This is Item!";
+        return $"効果 : {Type.ToString()} \n" +
+            $"量 : {strongth}";
     }
 }
 

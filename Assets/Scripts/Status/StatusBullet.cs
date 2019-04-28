@@ -18,7 +18,7 @@ public class StatusBullet : Status
     public override string DetailedText()
     {
         return $"破壊力 : {prefabBullet.Destruction} \n" +
-            $"基本初速 : {FiringSpeed} m/sec \n" +
+            $"初速度 : {FiringSpeed} m/sec \n" +
             $"冷却時間 : {Cooltime} sec \n" +
             SubText();
     }

@@ -8,7 +8,9 @@ public class DropItemOnDestroy : MonoBehaviour
 {
     public ItemTable itemTable;
     private InventoryUnit inventory;
-    
+
+    private bool isDestroy = false;
+
     void Start()
     {
         GetComponent<EnduranceBody>().OnDestroy += DoOnDestroy;
@@ -17,6 +19,9 @@ public class DropItemOnDestroy : MonoBehaviour
     
     private void DoOnDestroy()
     {
+        if (isDestroy) return;
+        isDestroy = true;
+
         ItemUnit item = itemTable.GetItem();
         inventory.AddItem(item);
         Destroy(item.gameObject);//つらい

@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61977502e8f11154986318ea35aaad8b, type: 3}
-  m_Name: StatusBullet split
+  m_Name: StatusBullet split double
   m_EditorClassIdentifier: 
-  Name: Shotgun Bullet
+  Name: Shotgun Bullet?
   Attribute: 0200000005000000
   icon: {fileID: 21300004, guid: 46892ef22eb45034bbdf55dac10333dc, type: 3}
-  text: "\u5148\u304C\u3068\u304C\u3063\u3066\u306A\u3044, \u3068\u3066\u3082\u5927\u304D\u306A\u5F3E\u4E38.\n\u4E2D\u306B\u5225\u306E\u5F3E\u4E38\u304C\u5165\u3063\u3066\u3044\u3066,\u3057\u3070\u3089\u304F\u3059\u308B\u3068\u5206\u88C2\u3059\u308B."
+  text: "\u3075\u3064\u3046 \u306E \u3088\u308A \u5927\u304D\u3044."
   FiringSpeed: 50
-  Cooltime: 0.9
-  prefabBullet: {fileID: 5817089609379968199, guid: ebe8721447928614a9063040ea2e6658,
+  Cooltime: 1.5
+  prefabBullet: {fileID: 1639826758097222835, guid: 153713190b58edb4a98074154a3132ce,
     type: 3}

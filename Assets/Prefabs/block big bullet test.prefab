@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ae9d59c153d23429d58ac6ad137f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 11400000, guid: 892daa4a6bf252044a593bb0eb30523b, type: 2}
+  gun: {fileID: 11400000, guid: 3ed5d503754d1e341bb8b17e86f86d17, type: 2}
   bullet: {fileID: 11400000, guid: b5492386e6149b4498b00c50907c584f, type: 2}
   directions:
   - {x: -1, y: 2}
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ae9d59c153d23429d58ac6ad137f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 11400000, guid: 892daa4a6bf252044a593bb0eb30523b, type: 2}
+  gun: {fileID: 11400000, guid: 3ed5d503754d1e341bb8b17e86f86d17, type: 2}
   bullet: {fileID: 11400000, guid: b5492386e6149b4498b00c50907c584f, type: 2}
   directions:
   - {x: -1, y: 2}
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ae9d59c153d23429d58ac6ad137f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 11400000, guid: 892daa4a6bf252044a593bb0eb30523b, type: 2}
+  gun: {fileID: 11400000, guid: 3ed5d503754d1e341bb8b17e86f86d17, type: 2}
   bullet: {fileID: 11400000, guid: b5492386e6149b4498b00c50907c584f, type: 2}
   directions:
   - {x: -1, y: 2}
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31ae9d59c153d23429d58ac6ad137f1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 11400000, guid: 892daa4a6bf252044a593bb0eb30523b, type: 2}
+  gun: {fileID: 11400000, guid: 3ed5d503754d1e341bb8b17e86f86d17, type: 2}
   bullet: {fileID: 11400000, guid: b5492386e6149b4498b00c50907c584f, type: 2}
   directions:
   - {x: -1, y: 1}
