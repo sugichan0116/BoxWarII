@@ -7,6 +7,7 @@ public class BatteryBehaviour : MonoBehaviour
     public StatusGun gun;
     public StatusBullet bullet;
     public List<Vector2> directions;
+    //event Direction +=    fixed, player target
 
     private Vector2 direction = new Vector2(-1, 1);
     private int index = 0;
@@ -14,11 +15,7 @@ public class BatteryBehaviour : MonoBehaviour
     private GunBehaviour battery;
 
     // Start is called before the first frame update
-    void Start()
-    {
-        battery = GetComponentInChildren<GunBehaviour>();
-
-    }
+    void Start() => battery = GetComponentInChildren<GunBehaviour>();
 
     // Update is called once per frame
     void Update()
@@ -41,6 +38,8 @@ public class BatteryBehaviour : MonoBehaviour
         IsPlayed = true;
         Init();
     }
+
+    public void Stop() => IsPlayed = false;
 
     private void Init()
     {
