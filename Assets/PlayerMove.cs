@@ -47,7 +47,7 @@ public class PlayerMove : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (groundTags.Contains(collision.collider.gameObject.tag))
+        if (groundTags.Contains(LayerMask.LayerToName(collision.collider.gameObject.layer)))
         {
             jumpCounter.Reset();
         }

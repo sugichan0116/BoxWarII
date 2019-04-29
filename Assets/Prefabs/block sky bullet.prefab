@@ -1,12 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!4 &680546953753005181 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7797329473711486336, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
-    type: 3}
-  m_PrefabInstance: {fileID: 7297067253351954941}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7603169335012742576
+--- !u!1 &118524645685520306
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14,42 +8,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7603169335012742580}
-  - component: {fileID: 7603169335012742583}
-  - component: {fileID: 7603169335012742582}
-  - component: {fileID: 7603169335012742577}
-  - component: {fileID: 8939088985701229791}
-  - component: {fileID: 3646989646470578068}
-  - component: {fileID: 1984842970408413465}
+  - component: {fileID: 118524645685520310}
+  - component: {fileID: 118524645685520309}
+  - component: {fileID: 118524645685520308}
+  - component: {fileID: 118524645685520307}
+  - component: {fileID: 1452676556436608733}
+  - component: {fileID: 6537610863636041110}
+  - component: {fileID: 118524645685520316}
   m_Layer: 9
-  m_Name: block bullet test
+  m_Name: block sky bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7603169335012742580
+--- !u!4 &118524645685520310
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7603169335012742576}
+  m_GameObject: {fileID: 118524645685520306}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.25, y: -1.3400002, z: 0}
+  m_LocalPosition: {x: -0.45925972, y: -18.419167, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
-  - {fileID: 1552905906469630147}
+  - {fileID: 2025942277491928948}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7603169335012742583
+--- !u!212 &118524645685520309
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7603169335012742576}
+  m_GameObject: {fileID: 118524645685520306}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -80,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300006, guid: 4a9e53adcd2331040848f3fc1a304715, type: 3}
+  m_Sprite: {fileID: 21300008, guid: 4a9e53adcd2331040848f3fc1a304715, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -91,15 +85,15 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &7603169335012742582
+--- !u!50 &118524645685520308
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7603169335012742576}
-  m_BodyType: 0
+  m_GameObject: {fileID: 118524645685520306}
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
@@ -112,13 +106,13 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &7603169335012742577
+--- !u!61 &118524645685520307
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7603169335012742576}
+  m_GameObject: {fileID: 118524645685520306}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -138,13 +132,13 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
---- !u!114 &8939088985701229791
+--- !u!114 &1452676556436608733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7603169335012742576}
+  m_GameObject: {fileID: 118524645685520306}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c244ab6bd2c6a7e45b3566505a7e985b, type: 3}
@@ -152,13 +146,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   robustness: 10
---- !u!114 &3646989646470578068
+--- !u!114 &6537610863636041110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7603169335012742576}
+  m_GameObject: {fileID: 118524645685520306}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b89db1cef2dc1e246a2684d98cf286b6, type: 3}
@@ -167,21 +161,27 @@ MonoBehaviour:
   prefabBody: {fileID: 5443567925494777914, guid: a14134a327406274792d1f9eff75af28,
     type: 3}
   prefabSmoke: {fileID: 19800008, guid: 7075bd5fe1480184695a32611c15da57, type: 3}
---- !u!114 &1984842970408413465
+--- !u!114 &118524645685520316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7603169335012742576}
+  m_GameObject: {fileID: 118524645685520306}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9901e7bf59b21204297d309533dcddc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   batteries:
-  - {fileID: 1753718217386875285}
---- !u!1 &8033578729528833512
+  - {fileID: 2025942277491928907}
+--- !u!4 &8081773424602661733 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7797329473711486336, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2025942277433849573}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2025942277491928906
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -189,8 +189,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1552905906469630147}
-  - component: {fileID: 1753718217386875285}
+  - component: {fileID: 2025942277491928948}
+  - component: {fileID: 2025942277491928907}
   m_Layer: 9
   m_Name: Battery
   m_TagString: Untagged
@@ -198,28 +198,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1552905906469630147
+--- !u!4 &2025942277491928948
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8033578729528833512}
-  m_LocalRotation: {x: -0, y: -0, z: 0.92387956, w: 0.38268343}
+  m_GameObject: {fileID: 2025942277491928906}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 680546953753005181}
-  m_Father: {fileID: 7603169335012742580}
+  - {fileID: 8081773424602661733}
+  m_Father: {fileID: 118524645685520310}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 135}
---- !u!114 &1753718217386875285
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &2025942277491928907
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8033578729528833512}
+  m_GameObject: {fileID: 2025942277491928906}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 31ae9d59c153d23429d58ac6ad137f1b, type: 3}
@@ -228,14 +228,14 @@ MonoBehaviour:
   gun: {fileID: 11400000, guid: 0a3a0f70e0ad83941bb122db9c626c07, type: 2}
   bullet: {fileID: 11400000, guid: 690e9aa000ac77447a501624d989b693, type: 2}
   directions:
-  - {x: -1, y: 1}
-  - {x: -1, y: 0}
---- !u!1001 &7297067253351954941
+  - {x: -1, y: -1}
+  - {x: 0, y: -1}
+--- !u!1001 &2025942277433849573
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1552905906469630147}
+    m_TransformParent: {fileID: 2025942277491928948}
     m_Modifications:
     - target: {fileID: 7797329473711486336, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
         type: 3}
