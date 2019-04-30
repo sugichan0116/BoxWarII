@@ -12,9 +12,10 @@ public class GateRegion : MonoBehaviour
 
     private SceneSwitch sceneSwitch;
     
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.transform.gameObject.tag != "Player") return;
+        if (Input.GetButtonDown("Jump") == false) return;
 
         if (IsWarp)
         {
