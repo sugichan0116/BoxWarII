@@ -20,7 +20,7 @@ MonoBehaviour:
   FiringSpeedRate: 0.92
   CooltimeRate: 1.4
   Muzzles:
-  - {x: 0, y: -0.3}
+  - {x: 0, y: -0.1}
   - {x: 0, y: 0}
-  - {x: 0, y: 0.3}
+  - {x: 0, y: 0.1}
   offset: {x: 0.32, y: 0}
