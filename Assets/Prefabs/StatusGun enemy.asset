@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ca590c14f6f0b2344a75df429109fbed, type: 3}
-  m_Name: StatusGun strong enemy
+  m_Name: StatusGun enemy
   m_EditorClassIdentifier: 
-  Name: Gun Strong?
+  Name: Simple Gun?
   Attribute: 04000000
   icon: {fileID: 21300002, guid: e0d351a566cadfc478e3083c63dd8cfa, type: 3}
-  text: "\u3068\u3066\u3082\u304A\u304A\u304D\u306A\u7832\u53F0.\n\u901F\u304F\u9060\u304F\u307E\u3067\u98DB\u3070\u305B\u308B.\n\u5927\u304D\u3059\u304E\u3066\u982D\u304C\u5F53\u305F\u308B."
+  text: "\u6A19\u6E96\u30B5\u30A4\u30BA\u306E\u7832\u53F0.\n\u5973\u306E\u5B50\u304C\u6301\u3064\u306B\u306F\u91CD\u3059\u304E\u308B.
+    ><;"
   Destruction: 10
-  FiringSpeedRate: 1.4
-  CooltimeRate: 1.2
+  FiringSpeedRate: 1
+  CooltimeRate: 1
   Muzzles:
   - {x: 0, y: 0}
-  offset: {x: 0.1, y: 0}
+  offset: {x: 0.05, y: 0}

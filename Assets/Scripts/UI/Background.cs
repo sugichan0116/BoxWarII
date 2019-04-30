@@ -30,4 +30,9 @@ public class Background : MonoBehaviour
         // マテリアルにオフセットを設定する
         GetComponent<Renderer>().sharedMaterial.SetTextureOffset("_MainTex", repeat);
     }
+
+    private void OnDestroy()
+    {
+        GetComponent<Renderer>().sharedMaterial.SetTextureOffset("_MainTex", Vector2.zero);
+    }
 }
