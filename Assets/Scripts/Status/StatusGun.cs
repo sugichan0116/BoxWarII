@@ -22,6 +22,6 @@ public class StatusGun : Status
         return $"破壊力補正 : + {Destruction} \n" +
             $"銃口 : x {Muzzles.Count} \n" +
             $"加速率 : x {FiringSpeedRate} \n" +
-            $"冷却効率 : x {1 / CooltimeRate} \n";
+            $"冷却効率 : x {(1 / CooltimeRate).ToString("f2")} \n";
     }
 }

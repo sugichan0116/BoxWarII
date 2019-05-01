@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: StatusItem
   m_EditorClassIdentifier: 
   Name: EnergyTin
-  Attribute: 06000000
+  Attribute: 0600000002000000
   icon: {fileID: 21300010, guid: 4a9e53adcd2331040848f3fc1a304715, type: 3}
   text: "\u56DE\u5FA9 \u3057\u307E\u3059.\nHealth ++"
   rare: 1

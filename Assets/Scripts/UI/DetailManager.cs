@@ -16,9 +16,8 @@ public class DetailManager : MonoBehaviour
         
         icon.sprite = item.status.icon;
         header.text = item.status.Name;
-        //rare.text = ;
-        cost.text = $"{Builder.Repeat("●", item.status.cost)} / " +
-            $"{Builder.Repeat("★\n", item.status.rare)}";
+        rare.text = $"Rare {Builder.Repeat("★", item.status.rare)}";
+        cost.text = $"Cost {Builder.Repeat("●", item.status.cost)}";
         text.text = item.status.text;
         subText.text = item.status.DetailedText();
     }

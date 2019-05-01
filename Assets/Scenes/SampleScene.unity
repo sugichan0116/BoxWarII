@@ -6383,6 +6383,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 887110454}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &887468383 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2234461432204020461, guid: 4a96a4a55a0ab6d4095080dd3a57f763,
+    type: 3}
+  m_PrefabInstance: {fileID: 949499469}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 949b4032141f7114199227b8fcbbc706, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &928711145
 GameObject:
   m_ObjectHideFlags: 0
@@ -6662,7 +6674,7 @@ PrefabInstance:
     - target: {fileID: 2234461432204020460, guid: 4a96a4a55a0ab6d4095080dd3a57f763,
         type: 3}
       propertyPath: attr
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a96a4a55a0ab6d4095080dd3a57f763, type: 3}
@@ -6839,7 +6851,7 @@ GameObject:
   - component: {fileID: 973622134}
   - component: {fileID: 973622133}
   m_Layer: 5
-  m_Name: Rare
+  m_Name: Cost
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6859,11 +6871,11 @@ RectTransform:
   m_Father: {fileID: 1066127815}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -46.97, y: -1.5}
-  m_SizeDelta: {x: 26.07, y: 112}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -17.919998}
+  m_SizeDelta: {x: -30, y: 25.03}
+  m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &973622133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8796,11 +8808,12 @@ GameObject:
   - component: {fileID: 1286590095}
   - component: {fileID: 1286590092}
   - component: {fileID: 1286590091}
+  - component: {fileID: 1286590099}
   - component: {fileID: 1286590094}
   - component: {fileID: 1286590093}
   - component: {fileID: 1286590098}
   - component: {fileID: 1286590100}
-  - component: {fileID: 1286590099}
+  - component: {fileID: 1286590101}
   m_Layer: 5
   m_Name: Equipment
   m_TagString: Untagged
@@ -8983,6 +8996,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellRobot: {fileID: 1497268199}
+--- !u!114 &1286590101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286590089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b6959ea5518af543956825d05d3f0a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cellItem: {fileID: 887468383}
 --- !u!1 &1291130455
 GameObject:
   m_ObjectHideFlags: 0
@@ -9606,8 +9632,8 @@ MonoBehaviour:
   header: {fileID: 2037857276}
   text: {fileID: 1110943761}
   subText: {fileID: 402239344}
-  rare: {fileID: 973622133}
-  cost: {fileID: 1797054715}
+  rare: {fileID: 1797054715}
+  cost: {fileID: 973622133}
 --- !u!114 &1385028874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12195,7 +12221,7 @@ GameObject:
   - component: {fileID: 1797054716}
   - component: {fileID: 1797054715}
   m_Layer: 5
-  m_Name: Cost
+  m_Name: Rare
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
