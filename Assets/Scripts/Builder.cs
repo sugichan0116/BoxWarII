@@ -60,8 +60,15 @@ public class Builder : MonoBehaviour
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
         return results.Count > 0;
     }
+    
+    public static string Repeat(string t, int n)
+    {
+        string text = "";
+        for (int i = 0; i < n; i++) text += t;
 
-
+        return text;
+    }
+    
     public static TweetBox TweetBox(TweetBox prefab, Transform trans)
     {
         if (poolTweet == null) poolTweet = FindGameObject(containerTag, nameTweet);

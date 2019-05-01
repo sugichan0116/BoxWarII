@@ -6,6 +6,7 @@ public class CellUnit : MonoBehaviour
 {
     public Color error = Color.red;
     public Color success = Color.green;
+    
     private ItemUnit item;
 
     public delegate void EventHandler(ItemUnit item);
@@ -19,9 +20,11 @@ public class CellUnit : MonoBehaviour
         item = GetComponentInChildren<ItemUnit>();
         if (old != item)
         {
-            OnChanged(item);
+            if(OnChanged != null) OnChanged(item);
         }
     }
+
+    public ItemUnit Item() => item;
 
     public void OnSuccess() => GetComponent<Image>().color = success;
     public void OnError() => GetComponent<Image>().color = error;

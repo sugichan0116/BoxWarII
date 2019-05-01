@@ -11,8 +11,6 @@ public class MoveHorizonal : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("tween?");
-
         sequence = DOTween.Sequence();
         sequence.Append(transform.DOMoveX(distance, 1f).SetRelative());
         sequence.Append(transform.DOMoveX(-distance, 1f).SetRelative());

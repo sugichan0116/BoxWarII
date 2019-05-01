@@ -33,6 +33,6 @@ public class CameraWork : MonoBehaviour
 
     private float p(float x)
     {
-        return (Mathf.Pow(x * 2 - 1, 3) + 1) / 2;
+        return (Mathf.Pow(x * 2 - 1, 5) + 1) / 2;
     }
 }

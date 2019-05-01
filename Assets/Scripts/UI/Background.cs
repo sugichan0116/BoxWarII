@@ -20,8 +20,6 @@ public class Background : MonoBehaviour
     {
         Vector3 delta = target.transform.position - offset;
 
-        Debug.Log((Y) ? Mathf.Repeat(delta.y * depth / scale.y * 100, 1) : 0f);
-
         Vector2 repeat = new Vector2(
             (X) ? Mathf.Repeat(delta.x * depth / scale.x * 100, 1) : 0f,
             (Y) ? Mathf.Clamp(delta.y * depth / scale.y * 100, 0, 1) : 0f

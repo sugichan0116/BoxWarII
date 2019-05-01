@@ -8,7 +8,7 @@ public class DetailManager : MonoBehaviour
     public ItemUnit item;
 
     public Image icon;
-    public Text header, text, subText;
+    public Text header, text, subText, rare, cost;
 
     void Update()
     {
@@ -16,6 +16,9 @@ public class DetailManager : MonoBehaviour
         
         icon.sprite = item.status.icon;
         header.text = item.status.Name;
+        //rare.text = ;
+        cost.text = $"{Builder.Repeat("●", item.status.cost)} / " +
+            $"{Builder.Repeat("★\n", item.status.rare)}";
         text.text = item.status.text;
         subText.text = item.status.DetailedText();
     }

@@ -16,6 +16,7 @@ public class Status : ScriptableObject
     public Sprite icon;
     [Multiline]
     public string text = "good small bullet.";
+    public int rare, cost;
 
     public virtual string DetailedText()
     {

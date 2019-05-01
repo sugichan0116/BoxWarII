@@ -9,9 +9,11 @@ public class PlayerMove : MonoBehaviour
     [SerializeField]
     private Vector2 move = new Vector2(4f, 100f);
     [SerializeField]
-    int maxJump = 2;
-    public float jumpInterval = 0.2f;
-    public float maxSpeed = 10f;
+    private int maxJump = 2;
+    [SerializeField]
+    private float jumpInterval = 0.2f;
+    [SerializeField]
+    private float maxSpeed = 10f;
     
     private Counter jumpCounter;
     private Timer jumpTimer;
@@ -22,11 +24,13 @@ public class PlayerMove : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        jumpCounter = new Counter(maxJump);
+        JumpMax(maxJump);
         jumpTimer = GetComponent<Timer>().Init(jumpInterval);
 
         rigidbody2 = GetComponent<Rigidbody2D>();
     }
+
+    public void JumpMax(int n) => jumpCounter = new Counter(n);
 
     void FixedUpdate() => Move();
 

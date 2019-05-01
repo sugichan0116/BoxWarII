@@ -18,6 +18,8 @@ MonoBehaviour:
   text: "\u5F53\u305F\u308B\u3068 \u7206\u767A\u3059\u308B \u5F3E\u4E38.\n\u3068\u3066\u3082\u5A01\u529B
     \u304C \u9AD8\u304F \u7BC4\u56F2\u5185\u3059\u3079\u3066 \u306B \u885D\u6483 \u3092
     \u4E0E\u3048\u308B."
+  rare: 3
+  cost: 5
   FiringSpeed: 55
   Cooltime: 1.2
   prefabBullet: {fileID: 6039534866774545707, guid: 943892ee55fd0c34087562bd56fa9454,

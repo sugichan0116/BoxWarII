@@ -20,4 +20,6 @@ public class CellRequireAttribute : MonoBehaviour
             else cell.OnError();
         };
     }
+
+    public string RequireAttribute() => attr.ToString();
 }

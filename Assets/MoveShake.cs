@@ -10,7 +10,6 @@ public class MoveShake : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("tween?");
         Vector3 offset = transform.position;
 
         sequence = DOTween.Sequence();

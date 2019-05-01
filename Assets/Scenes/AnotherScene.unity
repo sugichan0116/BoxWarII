@@ -1615,6 +1615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 159328463}
+  range: 1
 --- !u!114 &294388876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2615,9 +2616,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b41e11b6beff428928ae747a13ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  container: {fileID: 1759618395}
   cellBullet: {fileID: 1368800490}
   cellGun: {fileID: 1323666157}
-  container: {fileID: 1759618395}
 --- !u!114 &621175524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2630,9 +2631,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b5b41e11b6beff428928ae747a13ae6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  container: {fileID: 1783646015}
   cellBullet: {fileID: 497200264}
   cellGun: {fileID: 1101782853}
-  container: {fileID: 1783646015}
 --- !u!114 &621175525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3728,6 +3729,7 @@ GameObject:
   - component: {fileID: 789684267}
   - component: {fileID: 789684269}
   - component: {fileID: 789684270}
+  - component: {fileID: 789684271}
   m_Layer: 0
   m_Name: GateRegion (1)
   m_TagString: Gate
@@ -3743,7 +3745,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 789684265}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.8, y: 8.42, z: 0}
+  m_LocalPosition: {x: -0.8, y: 8.42, z: 1}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 1171427525}
@@ -3851,6 +3853,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &789684271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 789684265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 118dce24bef8fd441ab1a311883311d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tweetPrefab: {fileID: 4082611507732365060, guid: 3ea260eec1d284e4f849357339ff4f0b,
+    type: 3}
+  Text: "\u623B\u308B"
 --- !u!1 &809169403
 GameObject:
   m_ObjectHideFlags: 0
@@ -4996,6 +5013,16 @@ PrefabInstance:
       propertyPath: attr
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4659170272946976205, guid: 4a96a4a55a0ab6d4095080dd3a57f763,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5187656099542746490, guid: 4a96a4a55a0ab6d4095080dd3a57f763,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4a96a4a55a0ab6d4095080dd3a57f763, type: 3}
 --- !u!224 &1101782852 stripped
@@ -5132,6 +5159,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: slot
+      objectReference: {fileID: 0}
+    - target: {fileID: 1049000292627277356, guid: 8e481ce7780493841898c131b49b6e4d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5491748350314614410, guid: 8e481ce7780493841898c131b49b6e4d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e481ce7780493841898c131b49b6e4d, type: 3}
@@ -9770,6 +9807,8 @@ MonoBehaviour:
   header: {fileID: 910783855}
   text: {fileID: 1658820501}
   subText: {fileID: 1228906145}
+  rare: {fileID: 0}
+  cost: {fileID: 0}
 --- !u!114 &2040329946
 MonoBehaviour:
   m_ObjectHideFlags: 0

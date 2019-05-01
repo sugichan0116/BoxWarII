@@ -20,13 +20,13 @@ public class ItemUnit : MonoBehaviour
 
     public bool HaveAttribute(StatusAttribute attr)
     {
-        string d = "@ + " + attr + " // ";
-        foreach (var item in status.Attribute)
-        {
-            d += item;
-        }
+        //string d = "@ + " + attr + " // ";
+        //foreach (var item in status.Attribute)
+        //{
+        //    d += item;
+        //}
 
-        Debug.Log(d + status.Attribute.Contains(attr));
+        //Debug.Log(d + status.Attribute.Contains(attr));
         return status.Attribute.Contains(attr);
     }
 }

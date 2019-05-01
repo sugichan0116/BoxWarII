@@ -16,6 +16,8 @@ MonoBehaviour:
   Attribute: 0200000005000000
   icon: {fileID: 21300004, guid: 46892ef22eb45034bbdf55dac10333dc, type: 3}
   text: "\u3075\u3064\u3046 \u306E \u3088\u308A \u5927\u304D\u3044."
+  rare: 0
+  cost: 5
   FiringSpeed: 50
   Cooltime: 1.5
   prefabBullet: {fileID: 1639826758097222835, guid: 153713190b58edb4a98074154a3132ce,
