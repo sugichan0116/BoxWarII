@@ -9,9 +9,11 @@ public class EnduranceBody : MonoBehaviour
     [SerializeField]
     private float robustness = 10;
 
-    public delegate void EventHandlerB();
+    public TweetBox prefabBox;
 
-    public event EventHandlerB OnDestroy;
+    public delegate void EventHandler();
+
+    public event EventHandler OnDestroy;
 
     protected void Start()
     {
@@ -34,8 +36,16 @@ public class EnduranceBody : MonoBehaviour
     
     public void Impact(float strongth)
     {
-        health -= Mathf.Max(strongth / 2 - robustness, 0f) 
+        float damage = Mathf.Max(strongth / 2 - robustness, 0f)
             + strongth / 2 * ((robustness >= strongth) ? 0.25f : 1f);
+
+        health -= damage;
+        if (prefabBox != null)
+        {
+            TweetBox box = Builder.TweetBox(prefabBox, transform);
+            box.text = "" + (int)damage;
+            box.transform.position += new Vector3(Random.Range(-.5f, .5f), 0);
+        }
 
         if (health <= 0f)
         {

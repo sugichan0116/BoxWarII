@@ -119,6 +119,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 10
   robustness: 1
+  prefabBox: {fileID: 8584012481120153351, guid: bd0d4cccc6817854c81da62a20d076e7,
+    type: 3}
 --- !u!114 &6596854004649309337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,3 +162,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd653239259d3de4f8568e0aa39c10d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distance: 1

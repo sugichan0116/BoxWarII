@@ -314,6 +314,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   robustness: 10
+  prefabBox: {fileID: 8584012481120153351, guid: bd0d4cccc6817854c81da62a20d076e7,
+    type: 3}
 --- !u!114 &3646989646470578068
 MonoBehaviour:
   m_ObjectHideFlags: 0

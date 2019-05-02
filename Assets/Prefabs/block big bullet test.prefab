@@ -1,10 +1,28 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!4 &4830042545807307545 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7797329473711486336, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
+    type: 3}
+  m_PrefabInstance: {fileID: 3400903551753356953}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4830042545658004485 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7797329473711486336, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
+    type: 3}
+  m_PrefabInstance: {fileID: 3400903551436304773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &343986035564572765 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7797329473711486336, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
     type: 3}
   m_PrefabInstance: {fileID: 7562591206094718429}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4926389207327963996 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7797329473711486336, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2912598855266094812}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &604252503549345251
 GameObject:
@@ -206,24 +224,6 @@ MonoBehaviour:
   - {x: -1, y: 1}
   - {x: -1, y: 0}
   - {x: -1, y: -1}
---- !u!4 &4830042545658004485 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7797329473711486336, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
-    type: 3}
-  m_PrefabInstance: {fileID: 3400903551436304773}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &4830042545807307545 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7797329473711486336, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
-    type: 3}
-  m_PrefabInstance: {fileID: 3400903551753356953}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &4926389207327963996 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7797329473711486336, guid: 2a8df7db5f9577a4ba715b2e1df37deb,
-    type: 3}
-  m_PrefabInstance: {fileID: 2912598855266094812}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &8837307835385197867
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +373,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 400
   robustness: 20
+  prefabBox: {fileID: 8584012481120153351, guid: bd0d4cccc6817854c81da62a20d076e7,
+    type: 3}
 --- !u!114 &7188203643328394397
 MonoBehaviour:
   m_ObjectHideFlags: 0

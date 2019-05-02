@@ -14,7 +14,7 @@ public class ItemUnit : MonoBehaviour
         DragAndDropItem.OnItemDragEndEvent += item =>
         {
             if (item == null) return;
-            Debug.Log("aaa");
+
             if (item.GetCell() == null) return;
             if(Input.mousePosition.y > 300)
             item.GetCell().RemoveItem();
@@ -28,13 +28,6 @@ public class ItemUnit : MonoBehaviour
 
     public bool HaveAttribute(StatusAttribute attr)
     {
-        //string d = "@ + " + attr + " // ";
-        //foreach (var item in status.Attribute)
-        //{
-        //    d += item;
-        //}
-
-        //Debug.Log(d + status.Attribute.Contains(attr));
         return status.Attribute.Contains(attr);
     }
 }

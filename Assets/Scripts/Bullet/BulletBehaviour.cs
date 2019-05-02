@@ -35,8 +35,6 @@ public class BulletBehaviour : MonoBehaviour
 
     protected void OnCollisionEnter2D(Collision2D collision)
     {
-        //if (Builder.IsSameside(collision.collider.gameObject, gameObject)) return;
-
         EnduranceBody body = collision.collider.gameObject.GetComponent<EnduranceBody>();
         body?.Impact(KineticEnergy());
 

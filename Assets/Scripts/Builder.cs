@@ -79,7 +79,7 @@ public class Builder : MonoBehaviour
             trans.rotation, 
             poolTweet.transform);
     }
-
+    
     public static EnduranceBody Block(EnduranceBody prefab, Transform trans)
     {
         if (poolBlock == null) poolBlock = FindGameObject(containerTag, nameBlock);
