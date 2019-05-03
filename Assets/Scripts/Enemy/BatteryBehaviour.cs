@@ -44,7 +44,7 @@ public class BatteryBehaviour : MonoBehaviour
     private void Init()
     {
         battery = GetComponentInChildren<GunBehaviour>();
-        Debug.Log("Battery @@@@@@: " + battery + "/" + this);
+
         battery.Bullet = bullet;
         battery.Gun = gun;
     }

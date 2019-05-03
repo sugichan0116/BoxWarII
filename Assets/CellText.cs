@@ -15,15 +15,16 @@ public class CellText : MonoBehaviour
     void Start()
     {
         require = GetComponent<CellRequireAttribute>();
+        
+        attr.text = $"[{require.RequireAttribute()}]";
 
         GetComponent<CellUnit>().OnChanged += item =>
         {
             if (item != null)
             {
                 text.text = Builder.Repeat("●", item.status.cost);
-                attr.text = $"[{require.RequireAttribute()}]";
             }
-            else text.text = attr.text = "";
+            else text.text = "";
         };
     }
 
