@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(EnduranceBody))]
-[RequireComponent(typeof(PlayerMove))]
 public class Player : MonoBehaviour
 {
     public List<GunBehaviour> guns;
@@ -12,7 +11,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Move = GetComponent<PlayerMove>();
+        //Move = GetComponent<PlayerMove>();
     }
 
     private void Update() => FireGuns();

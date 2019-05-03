@@ -15,7 +15,7 @@ public class GateRegion : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.transform.gameObject.tag != "Player") return;
-        if (Input.GetButtonDown("Jump") == false) return;
+        if (Input.GetButtonDown("Vertical") == false) return;
 
         if (IsWarp)
         {

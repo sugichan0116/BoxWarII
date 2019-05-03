@@ -38,7 +38,7 @@ public class PlayerMove : MonoBehaviour
     {
         Vector2 input = new Vector2(Input.GetAxis("Horizontal") * move.x, 0f);
 
-        if (jumpCounter.HaveRoom() && jumpTimer.IsReady() && (Input.GetButtonDown("Jump")))
+        if (jumpCounter.HaveRoom() && jumpTimer.IsReady() && (Input.GetButtonDown("Vertical")))
         {
             input.y = move.y;
             jumpCounter.Count();
