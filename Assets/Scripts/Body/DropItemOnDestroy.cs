@@ -26,4 +26,13 @@ public class DropItemOnDestroy : MonoBehaviour
         inventory.AddItem(item);
         Destroy(item.gameObject);//つらい
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.gameObject.layer == LayerMask.NameToLayer("Player"))
+        {
+            DoOnDestroy();
+            Destroy(gameObject);
+        }
+    }
 }
