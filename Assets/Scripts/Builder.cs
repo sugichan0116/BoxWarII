@@ -69,7 +69,7 @@ public class Builder : MonoBehaviour
         return text;
     }
     
-    public static TweetBox TweetBox(TweetBox prefab, Transform trans)
+    public static UIWindow Window(UIWindow prefab, Transform trans)
     {
         if (poolTweet == null) poolTweet = FindGameObject(containerTag, nameTweet);
 

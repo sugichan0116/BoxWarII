@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 118dce24bef8fd441ab1a311883311d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tweetPrefab: {fileID: 4082611507732365060, guid: 3ea260eec1d284e4f849357339ff4f0b,
+  windowPrefab: {fileID: 4082611507732365060, guid: 3ea260eec1d284e4f849357339ff4f0b,
     type: 3}
+  isOnce: 0
   Text: "\u30B8\u30E3\u30F3\u30D7"

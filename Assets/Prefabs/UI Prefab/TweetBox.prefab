@@ -46,9 +46,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offset: {x: 0, y: 1}
-  text: "\u3086\u304B\u308A\u3055\u3093\u304B\u308F\u3044\u3044\uFF01"
-  time: 4
+  time: 0.2
   TextObject: {fileID: 8240750815712902378}
+  text: "\u3086\u304B\u308A\u3055\u3093\u304B\u308F\u3044\u3044\uFF01"
 --- !u!1 &6517825430647346685
 GameObject:
   m_ObjectHideFlags: 0

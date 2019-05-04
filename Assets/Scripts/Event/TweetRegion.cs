@@ -2,24 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(VisualizeOnEditor))]
-[System.Serializable]
-public class TweetRegion : MonoBehaviour
+public class TweetRegion : WindowRegion
 {
-    public TweetBox tweetPrefab;
     public string Text;
-
-    // Start is called before the first frame update
-    void Start()
+    
+    protected override void WindowOpen(UIWindow window)
     {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.transform.gameObject.tag != "Player") return;
-
-        TweetBox tweet = Builder.TweetBox(tweetPrefab, transform);
-        tweet.text = Text;
+        window.Open();
+        TweetBox box = window as TweetBox;
+        box.text = Text;
     }
 }

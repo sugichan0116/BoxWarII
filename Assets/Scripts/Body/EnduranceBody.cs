@@ -42,9 +42,10 @@ public class EnduranceBody : MonoBehaviour
         health -= damage;
         if (prefabBox != null)
         {
-            TweetBox box = Builder.TweetBox(prefabBox, transform);
+            TweetBox box = Builder.Window(prefabBox, transform) as TweetBox;
             box.text = "" + (int)damage;
             box.transform.position += new Vector3(Random.Range(-.5f, .5f), 0);
+            box.CloseAuto();
         }
 
         if (health <= 0f)

@@ -13,11 +13,9 @@ public class ItemUnit : MonoBehaviour
         GetComponent<Image>().sprite = status.icon;
         DragAndDropItem.OnItemDragEndEvent += item =>
         {
-            if (item == null) return;
+            if (item == null || item.GetCell() == null) return;
 
-            if (item.GetCell() == null) return;
-            if(Input.mousePosition.y > 300)
-            item.GetCell().RemoveItem();
+            if(Builder.IsPointerOverUIObject() == false) item.GetCell().RemoveItem();
         };
     }
 
