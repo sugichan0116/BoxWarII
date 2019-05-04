@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using System.Linq;
 
 [System.Serializable]
 public class ItemDirectory
@@ -51,25 +50,21 @@ public class RequireItemDirectory : MonoBehaviour
 
     private void SubscribeCellsEvent()
     {
-        foreach (var cell in GetComponentsInChildren<CellUnit>()
-            .Select((alphabet, index) => new { Value = alphabet, Index = index }))
+        foreach (var (cell, index) in GetComponentsInChildren<CellUnit>().WithIndex())
         {
-            cell.Value.OnChanged += item =>
+            cell.OnChanged += item =>
             {
-                if (item == null) customData.items[cell.Index] = "";
-                else customData.items[cell.Index] = item.status.Name;
+                customData.items[index] = (item == null) ? "" : item.status.Name;
             };
         }
     }
 
     private void InitializeCells()
     {
-        foreach (var cell in GetComponentsInChildren<CellUnit>()
-            .Select((alphabet, index) => new { Value = alphabet, Index = index }))
+        foreach (var (cell, index) in GetComponentsInChildren<CellUnit>().WithIndex())
         {
-            string itemName = customData.items[cell.Index];
-            cell.Value.AddItem(listForDecode.GetItemByName(itemName));
+            string itemName = customData.items[index];
+            cell.AddItem(listForDecode.GetItemByName(itemName));
         }
     }
 }
-
