@@ -7,8 +7,8 @@ public class UIWindow : MonoBehaviour
     public Vector2 offset;
     public float time = 1f;
 
-    private bool isOpen = false;
-    private float maxTime = 10f;
+    //private bool isOpen = false;
+    //private float maxTime = 10f;
     
     public void Open()
     {

@@ -19,4 +19,19 @@ public class ItemTable : ScriptableObject
         item.status = list[Random.Range(0, list.Count)];
         return item;
     }
+
+    public ItemUnit GetItemByName(string name)
+    {
+        foreach (var status in list)
+        {
+            if(status.Name == name)
+            {
+                ItemUnit item = Instantiate(prefabItem);
+                item.status = status;
+                return item;
+            }
+        }
+
+        return null;
+    }
 }

@@ -20,7 +20,7 @@ public class CellUnit : MonoBehaviour
         item = GetComponentInChildren<ItemUnit>();
         if (old != item)
         {
-            if(OnChanged != null) OnChanged(item);
+            OnChanged?.Invoke(item);
         }
     }
 
@@ -29,5 +29,19 @@ public class CellUnit : MonoBehaviour
     public void OnSuccess() => GetComponent<Image>().color = success;
     public void OnError() => GetComponent<Image>().color = error;
 
-    public void OnUsed() => GetComponent<DragAndDropCell>().RemoveItem();
+    public void OnUsed()
+    {
+        GetComponent<DragAndDropCell>().RemoveItem();
+        OnChanged?.Invoke(item); //??????????????????????????????????????
+    }
+
+    public void AddItem(ItemUnit _item)
+    {
+        if(_item == null)
+        {
+            Debug.LogWarning("!!!!!!!!!!!???????????");
+            return;
+        }
+        GetComponent<DragAndDropCell>().AddItem(_item.Item());
+    }
 }

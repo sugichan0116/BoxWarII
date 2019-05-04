@@ -14804,6 +14804,7 @@ GameObject:
   - component: {fileID: 1286590098}
   - component: {fileID: 1286590100}
   - component: {fileID: 1286590101}
+  - component: {fileID: 1286590102}
   m_Layer: 5
   m_Name: Equipment
   m_TagString: Untagged
@@ -14999,6 +15000,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cellItem: {fileID: 887468383}
+--- !u!114 &1286590102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286590089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3cd78c0b3f5ee340aa8ca692b135a2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  customData:
+    Title: E
+    items:
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+  identifier: savedata/Equip.json
+  encode: 0
+  encodePassword: 
+  format: 1
+  savePath: 1
+  resetBlanks: 1
+  saveOnAwake: 0
+  saveOnStart: 0
+  saveOnEnable: 0
+  saveOnDisable: 1
+  saveOnApplicationQuit: 1
+  saveOnApplicationPause: 0
+  loadOnAwake: 0
+  loadOnStart: 1
+  loadOnEnable: 0
+  listForDecode: {fileID: 11400000, guid: 99cef759642e6604b8bd5e84097768b5, type: 2}
 --- !u!1 &1291130455
 GameObject:
   m_ObjectHideFlags: 0
