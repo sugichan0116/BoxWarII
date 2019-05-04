@@ -3,90 +3,70 @@ using UnityEngine;
 
 using BayatGames.SaveGameFree.Encoders;
 using BayatGames.SaveGameFree.Serializers;
-using BayatGames.SaveGameFree.Types;
 using System.Text;
 using System.Collections.Generic;
-using System.Linq;
 
 [System.Serializable]
-public class ItemDirectory
+public class GameData
 {
-    public string Title;
-    public List<string> items;
+    public Dictionary<string, ItemDirectory> directories;
+    public int money;
+
+    public GameData()
+    {
+        directories = new Dictionary<string, ItemDirectory>();
+        money = 0;
+    }
 }
 
-//[RequireComponent(typeof(CellUnit))]
-public class AutoSaveItemDirectory : AutoSaveSystem<ItemDirectory>
+
+public class AutoSaveGameData : AutoSaveSystem<GameData>
 {
-
-    [Header("Cell")]
-    [Space]
-
-    public ItemTable listForDecode;
-
-    void Start()
+    public delegate void EventHandler(GameData data);
+    public event EventHandler OnSaveBefore, OnSaveAfter, OnLoadBefore, OnLoadAfter;
+    
+    public override void Save()
     {
+        OnSaveBefore?.Invoke(customData);
+        base.Save();
+        OnSaveAfter?.Invoke(customData);
+    }
 
-        //update
-        foreach (var cell in GetComponentsInChildren<CellUnit>().Select((alphabet, index) => new { Value = alphabet, Index = index }))
-        {
-            Debug.LogFormat("{0} => {1}", cell.Index, cell.Value);
-            cell.Value.OnChanged += item =>
-            {
-                if (item == null) customData.items[cell.Index] = "";
-                else customData.items[cell.Index] = item.status.Name;
-            };
-        }
-
-        if(loadOnStart)
-        {
-            Load();
-
-            Debug.LogFormat("OOOOOOOO :::: {0}", customData);
-            if (customData != null)
-            {
-                foreach (var cell in GetComponentsInChildren<CellUnit>().Select((alphabet, index) => new { Value = alphabet, Index = index }))
-                {
-                    Debug.LogFormat("{0} => {1}", cell.Index, cell.Value);
-
-                    //DOTO:item ItemTable -> DropItem -> Inventory CellUnit
-                    cell.Value.AddItem(
-                        listForDecode.GetItemByName(customData.items[cell.Index])
-                        );
-                }
-            }
-
-        }
-
-        //CellUnit cell = GetComponent<CellUnit>();
-        //cell.OnChanged += item =>
-        //{
-        //    if (item == null) customData = null;
-        //    else customData = item.status.Name;
-        //};
-
-        //if (loadOnStart)
-        //{
-        //    Load();
-        //    Debug.LogFormat("{0}", customData);
-        //    if (customData != "")
-        //    {
-        //        //DOTO:item ItemTable -> DropItem -> Inventory CellUnit
-        //        cell.gameObject.GetComponent<DragAndDropCell>()
-        //            .AddItem(listForDecode.GetItemByName(customData).Item());
-        //    }
-        //}
-
-        if (saveOnStart)
-        {
-            Save();
-        }
+    public override void Load()
+    {
+        OnLoadBefore?.Invoke(customData);
+        base.Load();
+        Debug.Log("GOOOOOOOOOOLD???");
+        OnLoadAfter?.Invoke(customData);
     }
 }
 
 
 public class AutoSaveSystem<T> : MonoBehaviour
 {
+    /// <summary>
+    /// Save format.
+    /// </summary>
+    public enum SaveFormat
+    {
+
+        /// <summary>
+        /// The XML.
+        /// </summary>
+        XML,
+
+        /// <summary>
+        /// The JSON.
+        /// </summary>
+        JSON,
+
+        /// <summary>
+        /// The Ninary.
+        /// </summary>
+        Binary
+
+    }
+
     public T customData;
     public string identifier = "exampleSaveCustom";
 
@@ -259,7 +239,7 @@ public class AutoSaveSystem<T> : MonoBehaviour
         }
     }
 
-    public void Save()
+    public virtual void Save()
     {
         SaveGame.Save(
             identifier,
@@ -272,11 +252,11 @@ public class AutoSaveSystem<T> : MonoBehaviour
             savePath);
     }
 
-    public void Load()
+    public virtual void Load()
     {
         customData = SaveGame.Load(
             identifier,
-            customData,
+            default(T),
             encode,
             encodePassword,
             serializer,
@@ -320,27 +300,4 @@ public class AutoSaveSystem<T> : MonoBehaviour
             Save();
         }
     }
-}
-
-/// <summary>
-/// Save format.
-/// </summary>
-public enum SaveFormat
-{
-
-    /// <summary>
-    /// The XML.
-    /// </summary>
-    XML,
-
-    /// <summary>
-    /// The JSON.
-    /// </summary>
-    JSON,
-
-    /// <summary>
-    /// The Ninary.
-    /// </summary>
-    Binary
-
 }

@@ -4,6 +4,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 // useless
+//
+//
+//
+//
+//
+//
+
 public class CleanOnSceneChange : MonoBehaviour
 {
     // Start is called before the first frame update
