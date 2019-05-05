@@ -15,7 +15,8 @@ MonoBehaviour:
   Name: Shotgun Bullet
   Attribute: 0200000005000000
   icon: {fileID: 21300004, guid: 46892ef22eb45034bbdf55dac10333dc, type: 3}
-  text: "\u5148\u304C\u3068\u304C\u3063\u3066\u306A\u3044, \u3068\u3066\u3082\u5927\u304D\u306A\u5F3E\u4E38.\n\u4E2D\u306B\u5225\u306E\u5F3E\u4E38\u304C\u5165\u3063\u3066\u3044\u3066,\u3057\u3070\u3089\u304F\u3059\u308B\u3068\u5206\u88C2\u3059\u308B."
+  text: "\u79C1\u306E\u982D\u304F\u3089\u3044\u306E\u5F3E\u4E38.\n\u5927\u91CF\u306B\u5206\u88C2\u3057\u3066,
+    \u5727\u5012\u3057\u307E\u3059!"
   rare: 2
   cost: 3
   FiringSpeed: 50

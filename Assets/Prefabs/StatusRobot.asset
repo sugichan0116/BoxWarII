@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Support Robot
   Attribute: 03000000
-  icon: {fileID: 21300004, guid: c79720bb5b8b5734a9a6067aecff7cad, type: 3}
-  text: "\u30ED\u30DC\u30C3\u30C8 \u3067\u3059\u306D"
+  icon: {fileID: 21300012, guid: 4a9e53adcd2331040848f3fc1a304715, type: 3}
+  text: "\u30ED\u30DC\u30C3\u30C8 \u3067\u3059\u306D.\n\u79C1\u304C\u4F7F\u3063\u3066
+    \u3042\u3052\u307E\u3057\u3087\u3046."
   rare: 1
   cost: 0
   maxCost: 10

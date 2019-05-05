@@ -16,7 +16,7 @@ MonoBehaviour:
   Attribute: 04000000
   icon: {fileID: 21300002, guid: e0d351a566cadfc478e3083c63dd8cfa, type: 3}
   text: "\u6A19\u6E96\u30B5\u30A4\u30BA\u306E\u7832\u53F0.\n\u5973\u306E\u5B50\u304C\u6301\u3064\u306B\u306F\u91CD\u3059\u304E\u308B.
-    ><;"
+    :D"
   rare: 0
   cost: 5
   Destruction: 10

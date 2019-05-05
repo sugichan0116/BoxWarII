@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Triplet Gun
   Attribute: 04000000
   icon: {fileID: 21300008, guid: c79720bb5b8b5734a9a6067aecff7cad, type: 3}
-  text: "\uFF13\u9580\u306E\u7832\u53F0"
+  text: "\uFF13\u9580\u306E\u7832\u53F0.\n\u5F37\u3044, \u91CD\u305F\u3044!"
   rare: 4
   cost: 5
   Destruction: 0
@@ -25,4 +25,4 @@ MonoBehaviour:
   - {x: 0, y: -0.1}
   - {x: 0, y: 0}
   - {x: 0, y: 0.1}
-  offset: {x: 0.32, y: 0}
+  offset: {x: 0.12, y: 0}

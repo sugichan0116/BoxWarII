@@ -15,7 +15,8 @@ MonoBehaviour:
   Name: EnergyTin
   Attribute: 0600000002000000
   icon: {fileID: 21300010, guid: 4a9e53adcd2331040848f3fc1a304715, type: 3}
-  text: "\u56DE\u5FA9 \u3057\u307E\u3059.\nHealth ++"
+  text: "\u56DE\u5FA9 \u3057\u307E\u3059.\nHealth ++\n\u88C5\u5099\u3059\u308B\u3068,
+    \u81EA\u52D5\u56DE\u5FA9"
   rare: 1
   cost: 0
   Type: 1

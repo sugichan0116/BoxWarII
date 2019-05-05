@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Robot CUBE
   Attribute: 0300000002000000
-  icon: {fileID: 21300004, guid: c79720bb5b8b5734a9a6067aecff7cad, type: 3}
-  text: "\u30ED\u30DC\u30C3\u30C8 \u3061\u3083\u3093.\n\u304B\u308F\u3044\u3044"
+  icon: {fileID: 21300012, guid: 4a9e53adcd2331040848f3fc1a304715, type: 3}
+  text: "\u30ED\u30DC\u30C3\u30C8 \u3061\u3083\u3093.\n\u304B\u308F\u3044\u3044.\n\u88DC\u52A9\u7528."
   rare: 2
   cost: 1
   maxCost: 8

@@ -13,6 +13,7 @@ public class StatusRobot : Status
 
     public override string DetailedText()
     {
-        return "robot";
+        return $"コスト上限 : + {maxCost} \n" +
+            $"空中跳躍 : {jump - 1} \n";
     }
 }
